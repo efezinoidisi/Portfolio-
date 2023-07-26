@@ -6,6 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --main-bg: #2c2f33;
+  --main-color: #CEDBDC;
+  --active-shadow: 3.7338130474090576px 3.7338130474090576px 6.223021507263184px 0px #000 inset,
+    -6.223021507263184px -6.223021507263184px 6.223021507263184px 0px #3B4451 inset;
+  --inactive-shadow: 6.223021507263184px 6.223021507263184px 18.669065475463867px 0px #000,
+    -6.223021507263184px -6.223021507263184px 18.669065475463867px 0px #3B4451;
+  --active-text: #1A91FA;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +24,32 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--main-bg);
+}
+
+.active {
+  box-shadow: var(--active-shadow);
+  color: var(--active-text);
+}
+
+.inactive {
+  box-shadow: var(--inactive-shadow);
+}
+
+.menu {
+  border-radius: 24.892px;
+  background: #2C2F33;
+  box-shadow: 6.223021507263184px 6.223021507263184px 18.669065475463867px 0px #000, -6.223021507263184px -6.223021507263184px 18.669065475463867px 0px #3B4451;
+  width: fit-content;
+  padding: 1rem 2rem;
+  color: var(--main-color);
+
+}
+
+.section-odd {
+  box-shadow: var(--active-shadow);
+}
+
+.section-even {
+  box-shadow: var(--inactive-shadow);
 }
