@@ -4,20 +4,17 @@ export default function Footer() {
   const date = new Date();
   const currentYear = date.getFullYear();
   return (
-    <footer className='md:ml-16 p-5'>
+    <footer className='border-t p-5 md:pl-20'>
       <div>
-        <h6>zee</h6>
-        <p>front-end developer</p>
+        <h4 className='text-white text-base'>zee</h4>
+        <p className='text-purple text-md'>front-end developer</p>
       </div>
-      <div>
+      {/* <div>
         <Socials size={10} />
-      </div>
+      </div> */}
 
-      <div>
-        <p>
-          &copy;{' '}
-          {` copyright ${currentYear}, designed by Elias and coded by Efezino`}
-        </p>
+      <div className='md:text-center'>
+        <p>&copy; {` copyright ${currentYear}, coded by Efezino`}</p>
       </div>
     </footer>
   );

@@ -24,14 +24,7 @@ const Socials = ({ size = 30 }: { size?: number }) => {
   ];
 
   const imageLinks = mySocials.map(({ id, img, name, link }: MySocials) => (
-    <ImageLink
-      src={img}
-      alt={name}
-      href={link}
-      width={size}
-      height={size}
-      key={id}
-    />
+    <ImageLink src={img} alt={name} href={link} size={size} key={id} />
   ));
   return (
     <div className='flex md:flex-col gap-5 items-center self-center'>

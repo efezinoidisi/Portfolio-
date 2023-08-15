@@ -3,22 +3,24 @@ import Link from 'next/link';
 
 type ImageLinkProps = {
   src: string;
-  width?: number;
-  height?: number;
+  size?: number;
   alt: string;
   href: string;
+  styles?: string;
+  imageStyles?: string;
 };
 
-const ImageLink = ({
-  src,
-  width = 100,
-  height = 100,
-  alt,
-  href,
-}: ImageLinkProps) => {
+const ImageLink = (props: ImageLinkProps) => {
+  const { src, size = 100, alt, href, styles = '', imageStyles = '' } = props;
   return (
-    <Link href={href} className='w-fit'>
-      <Image src={src} width={width} height={height} alt={alt} className='' />
+    <Link href={href} className={`w-fit ${styles}`}>
+      <Image
+        src={src}
+        width={size}
+        height={size}
+        alt={alt}
+        className={imageStyles}
+      />
     </Link>
   );
 };

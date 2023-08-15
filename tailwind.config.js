@@ -7,11 +7,41 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor: { body: '#2c2f33' },
+      colors: {
+        gray: '#ABB2BF',
+        purple: '#C778DD',
+        blue: '#62AEEF',
+        yellow: '#E5C07A',
+      },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        dots: 'url("/dots.svg")',
+      },
+      backgroundColor: {
+        body: '#282C33',
+        gray: '#ABB2BF',
+        teal: '#55B6C2',
+        header: 'rgba(40 ,44, 51, 0.8)',
+        bright: '#E06B74',
+        blue: '#62AEEF',
+        yellow: '#E5C07A',
+      },
+      borderColor: {
+        gray: '#ABB2BF',
+      },
+      backgroundSize: {
+        small: '10rem 100%',
+        smallest: '4rem 50%',
+        normal: '50%',
+      },
+      animation: {
+        nav: 'slide 0.5s ease-in-out forwards 1',
+      },
+      keyframes: {
+        slide: {
+          '0%': { left: '20%', right: '30%' },
+          '50%': { left: '10%', right: '20%' },
+          '100%': { left: '0', right: '0' },
+        },
       },
     },
   },

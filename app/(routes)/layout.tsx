@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { inter } from './fonts';
+import { firaCode } from './fonts';
 import NavBar from '../_components/nav/NavBar';
 import Footer from '../_components/Footer';
 import MiniSidebar from '../_components/nav/MiniSidebar';
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`${inter.className} bg-body text-white`}>
+      <body className={`${firaCode.className} bg-body text-gray`}>
         <NavBar />
         <MiniSidebar />
         {children}
