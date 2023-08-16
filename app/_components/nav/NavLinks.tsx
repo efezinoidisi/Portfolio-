@@ -1,7 +1,6 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import path from 'path';
 
 type NavLink = {
   name: string;
@@ -28,12 +27,13 @@ export default function NavLinks() {
           <Link
             href={`${href}`}
             key={name}
-            className={`after:content-[""] after:absolute relative after:bg-white after:bottom-0 after:hover:border after:hover:animate-nav group hover:text-blue capitalize transform ${
+            className={`after:content-[""] after:absolute relative after:bg-white after:bottom-0 after:hover:border after:hover:animate-nav group active:text-yellow hover:text-blue capitalize transform w-fit ${
               isActive ? 'text-white' : 'text-gray'
             }`}
           >
-            <span className='text-purple group-hover:text-yellow'>#</span>
-            {name}
+            <span className='text-purple group-hover:text-yellow'>{`<`}</span>
+            <span className='group-hover:text-lg'>{name}</span>
+            <span className='text-purple group-hover:text-yellow'>{`>`}</span>
           </Link>
         );
       })}

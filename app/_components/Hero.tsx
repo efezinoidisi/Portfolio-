@@ -32,7 +32,9 @@ const Skills = () => {
     <>
       {skills.map(({ title, id, content }: Skill) => (
         <div className='border border-gray basis-[40%]' key={id}>
-          <h3 className='border-b p-1 text-base text-white'>{title}</h3>
+          <h3 className='border-b border-gray p-1 text-base text-white'>
+            {title}
+          </h3>
           <p className='py-4 text-sm px-1'>{content}</p>
         </div>
       ))}
@@ -44,16 +46,22 @@ export default function Hero() {
   return (
     <section
       id='hero'
-      className='h-screen  bg-dots bg-no-repeat bg-right-bottom bg-smallest flex flex-col justify-evenly mb-10 md:mb-0'
+      className='md:h-screen  bg-dots bg-no-repeat bg-right-bottom bg-smallest flex flex-col justify-evenly mb-10 md:m-0'
     >
       <div className='flex flex-col-reverse md:flex-row justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0'>
-        <div className='md:basis-3/5'>
-          <h2 className='mb-3'>
+        <div className='md:basis-3/5 flex flex-col'>
+          <p className='mb-6 leading-7 text-center tracking-tighter md:text-left md:tracking-normal'>
             <span className='text-white'>Efezino</span> is a{' '}
             <span className='text-purple text-2xl'>frontend developer </span>
-            skilled in building interactive web interfaces.
-          </h2>
-          <Link href={'/contact'} className='border py-2 px-5 rounded-md'>
+            skilled in building interactive web interfaces, With a flair for
+            user-centric design. She transforms ideas into captivating websites.
+            Her collaborative approach turns your concepts into engaging online
+            realities.
+          </p>
+          <Link
+            href={'/contact'}
+            className='border-2 text-white font-mono uppercase border-purple py-2 px-5 rounded-md transform link w-fit self-center md:self-start'
+          >
             Contact me!
           </Link>
         </div>

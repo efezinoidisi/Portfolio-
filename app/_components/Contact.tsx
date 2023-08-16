@@ -8,7 +8,7 @@ export default function Contact() {
       <h2 className='heading mb-9'>
         <span className='text-purple'>#</span>contact-me
       </h2>
-      <p>
+      <p className='leading-7'>
         If you require a developer&#39;s expertise or are interested in
         establishing a connection for potential collaboration, please don&#39;t
         hesitate to reach out. Whether it&#39;s about joint projects, shared
@@ -16,7 +16,7 @@ export default function Contact() {
         Let&#39;s connect and see where our paths might lead!
       </p>
       <div className='border w-fit p-2 self-center mt-5'>
-        <h3 className='text-white py-3'>#message me here</h3>
+        <h3 className='text-white py-3'>{`<send me a message>`}</h3>
 
         <Link
           href='mailto:efezinoeidisi@gmail.com'

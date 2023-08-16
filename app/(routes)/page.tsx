@@ -1,24 +1,17 @@
-import Image from 'next/image';
 import About from '../_components/About';
 import Contact from '../_components/Contact';
 import Hero from '../_components/Hero';
 import Projects from '../_components/projects/Projects';
-import ImageLink from '../_components/nav/ImageLink';
+import { projects } from '../_components/projects/data';
 
 export default function Home() {
+  const threeProjects = projects.slice(0, 3);
   return (
     <main className='md:ml-16 p-5'>
       <Hero />
-      <Projects />
-      <About />
+      <Projects projects={threeProjects} page='home' />
+      <About page='home' />
       <Contact />
-      <ImageLink
-        src={'/angles-up-solid.svg'}
-        href='#hero'
-        styles=''
-        alt=''
-        imageStyles='animate-bounce'
-      />
     </main>
   );
 }

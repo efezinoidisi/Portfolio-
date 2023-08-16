@@ -17,10 +17,10 @@ module.exports = {
         dots: 'url("/dots.svg")',
       },
       backgroundColor: {
-        body: '#282C33',
+        body: '#2C2833',
         gray: '#ABB2BF',
         teal: '#55B6C2',
-        header: 'rgba(40 ,44, 51, 0.8)',
+        header: 'rgba(44 ,40, 51, 0.8)',
         bright: '#E06B74',
         blue: '#62AEEF',
         yellow: '#E5C07A',
@@ -35,12 +35,19 @@ module.exports = {
       },
       animation: {
         nav: 'slide 0.5s ease-in-out forwards 1',
+        move: 'button 1s ease-in-out infinite',
       },
       keyframes: {
         slide: {
           '0%': { left: '20%', right: '30%' },
           '50%': { left: '10%', right: '20%' },
-          '100%': { left: '0', right: '0' },
+          '100%': { left: '5%', right: '5%' },
+        },
+        button: {
+          '0%': { borderLeftColor: '#E5C07A' },
+          '50%': { borderRightColor: '#E5C07A' },
+          '75%': { borderTopColor: '#E5C07A' },
+          '100%': { borderBottomColor: '#E5C07A' },
         },
       },
     },

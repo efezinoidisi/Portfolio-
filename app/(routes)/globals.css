@@ -28,16 +28,20 @@ body {
   @apply content-[""] absolute top-0 left-full border-purple h-[60%] border-b w-24
 }
 
-.link {
-  @apply cursor-pointer
-}
-
 .small-dots-right {
   @apply bg-dots bg-smallest bg-no-repeat bg-right-bottom
 }
 
 .small-dots-left {
   @apply bg-dots bg-smallest bg-no-repeat bg-left-bottom
+}
+
+.link:hover {
+  @apply animate-move text-yellow font-medium
+}
+
+.link:active {
+  @apply bg-yellow
 }
 
 @media screen and (min-width: 765px) {

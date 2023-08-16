@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Works } from '@/app/_types/project';
-import { projects } from './data';
 import Image from 'next/image';
 import ImageLink from '../nav/ImageLink';
 import Card from './Card';
@@ -91,21 +90,26 @@ import Link from 'next/link';
 //   );
 // };
 
-export default function Projects() {
-  const threeProjects = projects.slice(0, 3);
+export default function Projects(props: { projects: Works[]; page: string }) {
+  const { projects, page } = props;
   return (
     <section id='projects' className='flex flex-col justify-between'>
       <header className='flex justify-between items-center pb-10'>
         <h2 className='heading'>
-          <span className='text-purple'>#</span>Projects
+          <span className='text-purple'>{`${
+            page === 'home' ? '#' : '/'
+          }`}</span>
+          Projects
         </h2>
-        <Link href={'/works'}>
-          view all <span>&rarr;</span>
-        </Link>
+        {page === 'home' && (
+          <Link href={'/works'}>
+            view all <span>&rarr;</span>
+          </Link>
+        )}
       </header>
 
       <div className='flex gap-2 items-center flex-col md:flex-row'>
-        {threeProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <Card key={project.id} {...project} index={index} />
         ))}
       </div>
