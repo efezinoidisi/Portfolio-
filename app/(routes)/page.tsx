@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <Projects projects={threeProjects} page='home' heading='projects' />
       <About page='home' />
-      <Contact />
+      <Contact page='home' />
     </main>
   );
 }
