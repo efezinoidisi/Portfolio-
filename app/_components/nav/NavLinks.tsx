@@ -7,7 +7,11 @@ type NavLink = {
   href: string;
 };
 
-export default function NavLinks() {
+export default function NavLinks({
+  handleClick = () => {},
+}: {
+  handleClick?: React.MouseEventHandler<HTMLAnchorElement>;
+}) {
   const links: NavLink[] = [
     { name: 'home', href: '/' },
     { name: 'works', href: '/works' },
@@ -30,6 +34,7 @@ export default function NavLinks() {
             className={`after:content-[""] after:absolute relative after:bg-white after:bottom-0 after:hover:border after:hover:animate-nav group active:text-yellow hover:text-blue capitalize transform w-fit ${
               isActive ? 'text-white' : 'text-gray'
             }`}
+            onClick={handleClick}
           >
             <span className='text-purple group-hover:text-yellow'>{`<`}</span>
             <span className='group-hover:text-lg'>{name}</span>

@@ -29,16 +29,17 @@ export default function NavBar() {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
+  const handleMenu = () => {
+    setShowMobileMenu((prev) => !prev);
+  };
+
   return (
     <header className='flex items-center sticky top-0 bg-header md:ml-16 justify-between p-5 z-50'>
       <Link href={'/'} className='text-3xl font-bold'>
         <span className='text-purple'>z</span>
         <span>ee</span>
       </Link>
-      <Button
-        handleClick={() => setShowMobileMenu((prev) => !prev)}
-        styles='md:hidden'
-      >
+      <Button handleClick={handleMenu} styles='md:hidden'>
         {showMobileMenu ? (
           <CgClose className={iconStyle} />
         ) : (
@@ -57,7 +58,7 @@ export default function NavBar() {
           className='fixed top-20 bottom-0 bg-gray-500 z-50 bg-body left-0 right-0 p-5 flex flex-col justify-between items-start pb-16 transform transition-transform'
         >
           <motion.div initial='initial' animate='final' variants={variants}>
-            <NavLinks />
+            <NavLinks handleClick={handleMenu} />
             <Socials size={'text-7xl'} />
           </motion.div>
         </motion.div>
