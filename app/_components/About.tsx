@@ -1,12 +1,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function About({ page = '' }: { page: string }) {
+export default function About({ page = '' }: { page?: string }) {
   return (
-    <section id='about' className='my-10 h-screen flex flex-col justify-evenly'>
-      <h2 className='heading'>
-        <span className='text-purple'>#</span>about-me
-      </h2>
+    <section
+      id='about'
+      className={`${page && 'my-10 h-screen'} flex flex-col justify-evenly`}
+    >
+      {page && (
+        <h2 className='heading'>
+          <span className='text-purple'>#</span>about-me
+        </h2>
+      )}
       <div className='flex items-center justify-start small-dots-left flex-col-reverse md:flex-row '>
         <div className='basis-3/5'>
           <p

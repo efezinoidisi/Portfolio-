@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`${firaCode.className} bg-body text-gray`}>
         <NavBar />
         <MiniSidebar />
-        {children}
+        <div className='md:w-11/12 md:m-auto'>{children}</div>
         <Footer />
       </body>
     </html>

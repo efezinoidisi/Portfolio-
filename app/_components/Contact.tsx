@@ -2,12 +2,14 @@ import Link from 'next/link';
 import Button from './Button';
 import Image from 'next/image';
 
-export default function Contact() {
+export default function Contact({ page = '' }: { page?: string }) {
   return (
     <section id='contact' className='flex flex-col'>
-      <h2 className='heading mb-9'>
-        <span className='text-purple'>#</span>contact-me
-      </h2>
+      {page && (
+        <h2 className='heading mb-9'>
+          <span className='text-purple'>#</span>contact-me
+        </h2>
+      )}
       <p className='leading-7'>
         If you require a developer&#39;s expertise or are interested in
         establishing a connection for potential collaboration, please don&#39;t

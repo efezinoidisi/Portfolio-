@@ -50,7 +50,7 @@ export default function Hero() {
     >
       <div className='flex flex-col-reverse md:flex-row justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0'>
         <div className='md:basis-3/5 flex flex-col'>
-          <p className='mb-6 leading-7 text-center tracking-tighter md:text-left md:tracking-normal'>
+          <p className='mb-6 leading-7 text-center tracking-tighter md:text-left md:tracking-normal max-w-2xl'>
             <span className='text-white'>Efezino</span> is a{' '}
             <span className='text-purple text-2xl'>frontend developer </span>
             skilled in building interactive web interfaces, With a flair for

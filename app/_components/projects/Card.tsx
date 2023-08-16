@@ -1,15 +1,23 @@
 import Image from 'next/image';
 import ImageLink from '../nav/ImageLink';
 import { Works } from '@/app/_types/project';
+import { FaGithub } from 'react-icons/fa6';
+import { FiExternalLink } from 'react-icons/fi';
+import Link from 'next/link';
 
 type CardProps = Works & {
   index: number;
+  page: string;
 };
 
 export default function Card(props: CardProps) {
-  const { src, name, brief, stack, index, github, preview, id } = props;
+  const { src, name, brief, stack, index, github, preview, page } = props;
   return (
-    <article className='border-2 border-gray'>
+    <article
+      className={`border-2 border-gray transform ${
+        page && index === 1 ? 'md:scale-[1.15]' : ''
+      }`}
+    >
       <Image
         src={`/${src}`}
         alt=''
@@ -27,20 +35,18 @@ export default function Card(props: CardProps) {
         </h3>
         <p>{brief}</p>
         <div className='flex items-center gap-2 py-3'>
-          <ImageLink
-            src='/github.svg'
-            alt=''
+          <Link
             href={github}
-            size={30}
-            styles='border border-gray px-6 py-1 rounded'
-          />
-          <ImageLink
-            src='/arrow-up.svg'
-            alt=''
+            className='border border-gray w-2/3 py-1 rounded flex justify-center items-center gap-2'
+          >
+            github <FaGithub />
+          </Link>
+          <Link
             href={preview}
-            size={30}
-            styles='border border-gray px-6 py-1 rounded'
-          />
+            className='border border-gray w-2/3 py-1 rounded flex justify-center items-center'
+          >
+            view <FiExternalLink />
+          </Link>
         </div>
       </div>
     </article>

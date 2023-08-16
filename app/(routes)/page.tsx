@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className='md:ml-16 p-5'>
       <Hero />
-      <Projects projects={threeProjects} page='home' />
+      <Projects projects={threeProjects} page='home' heading='projects' />
       <About page='home' />
       <Contact />
     </main>

@@ -1,5 +1,5 @@
 'use client';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, useAnimation, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Works } from '@/app/_types/project';
@@ -90,16 +90,18 @@ import Link from 'next/link';
 //   );
 // };
 
-export default function Projects(props: { projects: Works[]; page: string }) {
-  const { projects, page } = props;
+export default function Projects(props: {
+  projects: Works[];
+  page?: string;
+  heading: string;
+}) {
+  const { projects, page = '', heading } = props;
   return (
     <section id='projects' className='flex flex-col justify-between'>
       <header className='flex justify-between items-center pb-10'>
         <h2 className='heading'>
-          <span className='text-purple'>{`${
-            page === 'home' ? '#' : '/'
-          }`}</span>
-          Projects
+          <span className='text-purple'>{`#`}</span>
+          {heading}
         </h2>
         {page === 'home' && (
           <Link href={'/works'}>
@@ -108,9 +110,9 @@ export default function Projects(props: { projects: Works[]; page: string }) {
         )}
       </header>
 
-      <div className='flex gap-2 items-center flex-col md:flex-row'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
         {projects.map((project, index) => (
-          <Card key={project.id} {...project} index={index} />
+          <Card key={project.id} {...project} index={index} page={page} />
         ))}
       </div>
     </section>
