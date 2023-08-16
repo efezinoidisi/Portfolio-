@@ -14,7 +14,7 @@ export default function Card(props: CardProps) {
   const { src, name, brief, stack, index, github, preview, page } = props;
   return (
     <article
-      className={`border-2 border-gray transform ${
+      className={`border rounded border-gray transform ${
         page && index === 1 ? 'md:scale-[1.15]' : ''
       }`}
     >
@@ -26,7 +26,7 @@ export default function Card(props: CardProps) {
         sizes='30%'
         className='h-1/3 w-full border-b border-gray'
       />
-      <p className='border-b border-gray py-2 uppercase text-base px-1'>
+      <p className='border-b border-gray py-2 capitalize text-base px-1'>
         {stack}
       </p>
       <div className='px-2 pt-4'>

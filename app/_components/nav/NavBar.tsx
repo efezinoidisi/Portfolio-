@@ -55,11 +55,16 @@ export default function NavBar() {
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: '100%' }}
-          className='fixed top-20 bottom-0 bg-gray-500 z-50 bg-body left-0 right-0 p-5 flex flex-col justify-between items-start pb-16 transform transition-transform'
+          className='fixed top-16 bottom-0 bg-gray-500 z-50 bg-body left-0 right-0 p-5  transform transition-transform'
         >
-          <motion.div initial='initial' animate='final' variants={variants}>
+          <motion.div
+            initial='initial'
+            animate='final'
+            variants={variants}
+            className='flex flex-col items-start pb-16 justify-between h-full'
+          >
             <NavLinks handleClick={handleMenu} />
-            <Socials size={'text-7xl'} />
+            <Socials size={'text-5xl'} />
           </motion.div>
         </motion.div>
       )}

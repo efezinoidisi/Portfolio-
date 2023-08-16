@@ -111,7 +111,7 @@ export default function Projects(props: {
       </header>
 
       <div className='grid grid-cols-1 md:grid-cols-3 gap-5 lg:gap-9'>
-        {projects.map((project, index) => (
+        {projects?.map((project, index) => (
           <Card key={project.id} {...project} index={index} page={page} />
         ))}
       </div>
