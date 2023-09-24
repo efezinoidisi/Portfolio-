@@ -10,11 +10,12 @@ module.exports = {
       colors: {
         gray: '#ABB2BF',
         purple: '#C778DD',
-        blue: '#62AEEF',
+        'sky-blue': '#62AEEF',
         yellow: '#E5C07A',
       },
       backgroundImage: {
         dots: 'url("/dots.svg")',
+        'two-dots': '[url("/dots.svg"), url("/dots.svg")]',
       },
       backgroundColor: {
         body: '#2C2833',
@@ -22,7 +23,7 @@ module.exports = {
         teal: '#55B6C2',
         header: 'rgba(44 ,40, 51, 0.8)',
         bright: '#E06B74',
-        blue: '#62AEEF',
+        'sky-blue': '#62AEEF',
         yellow: '#E5C07A',
       },
       borderColor: {

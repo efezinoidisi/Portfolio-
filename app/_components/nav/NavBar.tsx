@@ -39,6 +39,16 @@ export default function NavBar() {
         <span className='text-purple'>z</span>
         <span>ee</span>
       </Link>
+
+      <div className='hidden md:block'>
+        <NavLinks />
+      </div>
+
+      <>
+        <a href='' className='' download>
+          download resume
+        </a>
+      </>
       <Button handleClick={handleMenu} styles='md:hidden'>
         {showMobileMenu ? (
           <CgClose className={iconStyle} />
@@ -46,9 +56,6 @@ export default function NavBar() {
           <CgMenuRight className={iconStyle} />
         )}
       </Button>
-      <div className='hidden md:block'>
-        <NavLinks />
-      </div>
 
       {/* mobile navigation  */}
       {showMobileMenu && (

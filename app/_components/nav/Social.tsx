@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import ImageLink from './ImageLink';
 import { FaGithub, FaTwitter } from 'react-icons/fa6';
-import { IconType } from 'react-icons';
+import { BsLinkedin } from 'react-icons/bs';
 
 type MySocials = {
   id: number;
@@ -16,14 +16,20 @@ const Socials = ({ size = 'text-3xl' }: { size?: string }) => {
     {
       id: 0,
       name: 'github',
-      link: '',
+      link: 'https://github.com/efezinoidisi/',
       icon: <FaGithub className='' />,
     },
     {
       id: 1,
       name: 'twitter',
-      link: '',
-      icon: <FaTwitter className='text-blue' />,
+      link: 'https://twitter.com/_zeeknow/',
+      icon: <FaTwitter className='text-blue-500' />,
+    },
+    {
+      id: 2,
+      name: 'linkedin',
+      link: 'https://www.linkedin.com/in/endurance-idisi/',
+      icon: <BsLinkedin className='text-blue-600' />,
     },
   ];
 
@@ -33,9 +39,9 @@ const Socials = ({ size = 'text-3xl' }: { size?: string }) => {
       href={link}
       key={id}
       target='_blank'
-      aria-label={`view my ${name} profile`}
+      aria-label={`my ${name} profile`}
       title={name}
-      className={`${size}`}
+      className={`${size} hover:scale-[1.3] transform transition-all duration-75 `}
     >
       {icon}
     </Link>

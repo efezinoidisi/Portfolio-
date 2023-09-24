@@ -15,7 +15,7 @@ export default function Footer() {
 
       <div className='md:text-center'>
         <p className='text-sm'>
-          &copy; {` copyright ${currentYear}, coded by Efezino`}
+          &copy; {` copyright ${currentYear}, developed by Efezino`}
         </p>
       </div>
     </footer>

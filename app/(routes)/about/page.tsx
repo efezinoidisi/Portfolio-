@@ -1,5 +1,5 @@
-import Me from '@/app/_components/About';
-import { AboutMe } from '@/app/_types/about';
+import Me from '@/components/About';
+import { AboutMe } from '@/types/about';
 
 export default function About() {
   const randomFacts: AboutMe[] = [

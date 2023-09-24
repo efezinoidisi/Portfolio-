@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import ImageLink from '../nav/ImageLink';
-import { Works } from '@/app/_types/project';
+import { Works } from '@/types/project';
 import { FaGithub } from 'react-icons/fa6';
 import { FiExternalLink } from 'react-icons/fi';
 import Link from 'next/link';
+import ScrollAnimate from '../ScrollAnimate';
 
 type CardProps = Works & {
   index: number;
@@ -13,7 +14,7 @@ type CardProps = Works & {
 export default function Card(props: CardProps) {
   const { src, name, brief, stack, index, github, preview, page } = props;
   return (
-    <article
+    <ScrollAnimate
       className={`border rounded border-gray transform ${
         page && index === 1 ? 'md:scale-[1.15]' : ''
       }`}
@@ -49,6 +50,6 @@ export default function Card(props: CardProps) {
           </Link>
         </div>
       </div>
-    </article>
+    </ScrollAnimate>
   );
 }

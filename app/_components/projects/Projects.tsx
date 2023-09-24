@@ -1,13 +1,8 @@
-'use client';
-import { useEffect, useState } from 'react';
-import { motion, useAnimation, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Works } from '@/app/_types/project';
+import { Works } from '@/types/project';
 import Image from 'next/image';
 import ImageLink from '../nav/ImageLink';
 import Card from './Card';
 import Link from 'next/link';
-
 // const Project = ({
 //   name,
 //   index,
@@ -104,7 +99,7 @@ export default function Projects(props: {
           {heading}
         </h2>
         {page === 'home' && (
-          <Link href={'/works'}>
+          <Link href={'/works'} className='link'>
             view all <span>&rarr;</span>
           </Link>
         )}

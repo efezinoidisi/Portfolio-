@@ -1,9 +1,9 @@
-import Works from '@/app/_components/projects/Projects';
+import Works from '@/components/projects/Projects';
 import {
   projects,
   sideProjects,
   teamProjects,
-} from '@/app/_components/projects/data';
+} from '@/components/projects/data';
 
 export default function Projects() {
   return (

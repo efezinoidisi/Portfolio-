@@ -37,7 +37,11 @@ body {
 }
 
 .link:hover {
-  @apply animate-move text-yellow font-medium
+  @apply scale-[0.9] text-yellow font-medium
+}
+
+.btn:hover {
+  @apply animate-move scale-[0.9] text-yellow font-medium transform duration-75
 }
 
 .link:active {

@@ -17,7 +17,6 @@ export default function NavLinks({
     { name: 'works', href: '/works' },
     { name: 'about-me', href: '/about' },
     { name: 'contact-me', href: '/contact' },
-    { name: 'view-resume', href: '/resume' },
   ];
 
   const pathname = usePathname();
@@ -31,14 +30,12 @@ export default function NavLinks({
           <Link
             href={`${href}`}
             key={name}
-            className={`after:content-[""] after:absolute relative after:bg-white after:bottom-0 after:hover:border after:hover:animate-nav group active:text-yellow hover:text-blue capitalize transform w-fit ${
+            className={`after:content-[""] after:absolute relative after:bg-white after:bottom-0 after:hover:border after:hover:animate-nav group active:text-yellow transform w-fit hover:scale-[0.9] transition-transform delay-75 ${
               isActive ? 'text-white' : 'text-gray'
             }`}
             onClick={handleClick}
           >
-            <span className='text-purple group-hover:text-yellow'>{`<`}</span>
-            <span className='group-hover:text-lg'>{name}</span>
-            <span className='text-purple group-hover:text-yellow'>{`>`}</span>
+            <span className='group-hover:text-white capitalize'>{name}</span>
           </Link>
         );
       })}

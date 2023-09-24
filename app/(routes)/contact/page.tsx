@@ -1,4 +1,5 @@
-import ContactMe from '@/app/_components/Contact';
+import ContactMe from '@/components/Contact';
+
 export default function Contact() {
   return (
     <main className='md:ml-16 p-5'>
