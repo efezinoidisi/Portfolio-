@@ -34,7 +34,7 @@ export default function NavBar() {
   };
 
   return (
-    <header className='flex items-center sticky top-0 bg-header md:ml-16 justify-between p-5 z-50'>
+    <header className='flex items-center sticky top-0 bg-header md:ml-16 justify-between p-5 z-50 md:pr-14'>
       <Link href={'/'} className='text-3xl font-bold'>
         <span className='text-purple'>z</span>
         <span>ee</span>
@@ -45,7 +45,11 @@ export default function NavBar() {
       </div>
 
       <>
-        <a href='' className='' download>
+        <a
+          href=''
+          className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95'
+          download
+        >
           download resume
         </a>
       </>

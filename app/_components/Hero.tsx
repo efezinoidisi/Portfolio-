@@ -20,7 +20,7 @@ const Skills = () => {
     {
       id: 1,
       title: 'frameworks',
-      content: 'react next-js',
+      content: 'react next-js tailwind styled-components',
     },
     {
       id: 2,
@@ -36,7 +36,7 @@ const Skills = () => {
           <h3 className='border-b border-gray p-1 text-base text-white'>
             {title}
           </h3>
-          <p className='py-4 text-sm px-1'>{content}</p>
+          <p className='py-4 text-sm px-1 leading-7'>{content}</p>
         </div>
       ))}
     </>
@@ -51,7 +51,7 @@ export default function Hero() {
     >
       <div className='flex flex-col-reverse md:flex-row justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0'>
         <div className='md:basis-3/5 flex flex-col'>
-          <p className='mb-6 leading-7  tracking-tighter md:text-left md:tracking-normal max-w-xl'>
+          <p className='mb-6  tracking-wider leading-8 md:text-left md:tracking-wider max-w-xl'>
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
