@@ -1,8 +1,6 @@
-'use client';
 import About from './_components/About';
 import Contact from './_components/Contact';
 import Hero from './_components/Hero';
-import ScrollAnimate from './_components/ScrollAnimate';
 import Projects from './_components/projects/Projects';
 import { projects } from './_components/projects/data';
 

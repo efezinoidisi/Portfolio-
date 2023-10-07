@@ -1,5 +1,3 @@
-import Socials from './nav/Social';
-
 export default function Footer() {
   const date = new Date();
   const currentYear = date.getFullYear();

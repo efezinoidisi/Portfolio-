@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import ImageLink from './ImageLink';
 import { FaGithub, FaTwitter } from 'react-icons/fa6';
 import { BsLinkedin } from 'react-icons/bs';
 

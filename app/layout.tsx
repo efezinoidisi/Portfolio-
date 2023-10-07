@@ -4,14 +4,10 @@ import { firaCode } from './fonts';
 import NavBar from '@/components/nav/NavBar';
 import Footer from '@/components/Footer';
 import MiniSidebar from '@/components/nav/MiniSidebar';
-//import { AnimatePresence, motion } from 'framer-motion';
 
 export const metadata: Metadata = {
   title: "Efezino's portfolio",
   description: 'Efezino Idisi | Frontend developer',
-  openGraph: {
-    images: '',
-  },
 };
 
 export default function RootLayout({

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import ImageLink from '../nav/ImageLink';
 import { Works } from '@/types/project';
 import { FaGithub } from 'react-icons/fa6';
 import { FiExternalLink } from 'react-icons/fi';

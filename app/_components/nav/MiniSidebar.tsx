@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Socials from './Social';
 
 export default function MiniSidebar() {
