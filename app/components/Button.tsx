@@ -5,6 +5,7 @@ type ButtonProps = {
   type?: 'button' | 'submit' | 'reset';
   handleClick?: React.MouseEventHandler<HTMLButtonElement>;
   styles?: string;
+  disabled?: boolean;
 };
 
 export default function Button(props: ButtonProps) {
@@ -13,9 +14,15 @@ export default function Button(props: ButtonProps) {
     type = 'button',
     handleClick = () => {},
     styles = '',
+    ...others
   } = props;
   return (
-    <button type={type} onClick={handleClick} className={`${styles}`}>
+    <button
+      type={type}
+      onClick={handleClick}
+      className={`${styles}`}
+      {...others}
+    >
       {children}
     </button>
   );

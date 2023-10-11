@@ -4,6 +4,7 @@ import { firaCode } from './fonts';
 import NavBar from '@/components/nav/NavBar';
 import Footer from '@/components/Footer';
 import MiniSidebar from '@/components/nav/MiniSidebar';
+import { Toaster } from 'react-hot-toast';
 
 export const metadata: Metadata = {
   title: "Efezino's portfolio",
@@ -20,7 +21,10 @@ export default function RootLayout({
       <body className={`${firaCode.className} bg-body text-gray`}>
         <NavBar />
         <MiniSidebar />
-        <div className='md:w-11/12 md:m-auto'>{children}</div>
+        <div className='md:w-11/12 md:m-auto'>
+          <Toaster />
+          {children}
+        </div>
         <Footer />
       </body>
     </html>
