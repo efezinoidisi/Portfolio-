@@ -7,7 +7,7 @@ import { projects } from '@/components/projects/data';
 export default function Home() {
   const threeProjects = projects.slice(0, 3);
   return (
-    <main className='md:ml-16 p-5'>
+    <main className='md:ml-16 p-5 flex flex-col gap-y-20'>
       <Hero />
       {/* add work experience */}
       <Projects projects={threeProjects} page='home' heading='projects' />
