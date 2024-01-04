@@ -18,7 +18,7 @@ module.exports = {
         'two-dots': '[url("/dots.svg"), url("/dots.svg")]',
       },
       backgroundColor: {
-        body: '#2C2833',
+        body: '#282C33',
         gray: '#ABB2BF',
         teal: '#55B6C2',
         header: 'rgba(44 ,40, 51, 0.8)',

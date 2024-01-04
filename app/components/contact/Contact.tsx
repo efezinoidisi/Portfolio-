@@ -35,7 +35,7 @@ export default function Contact({ page = '' }: { page?: string }) {
           </Link>
 
           <Link
-            href='https://wa.me/08169209097'
+            href='https://wa.me/23408169209097'
             className='flex gap-2 items-center'
             target='_blank'
           >

@@ -10,6 +10,26 @@ export const projects: Works[] = [
     src: 'portfolio.png',
     brief: "A simple web developer's portfolio",
   },
+  {
+    id: 1,
+    name: 'duty circle',
+    stack: 'nextjs tailwind typescript',
+    github: 'https://github.com/codelawani/duty_circle',
+    preview: 'https://dutycircle.vercel.app/',
+    src: 'dutycircle.png',
+    brief:
+      'An application designed to merge task management with public accountability. Users can create and manage personal tasks while also choosing to share them publicly.',
+  },
+  {
+    id: 2,
+    name: 'moviesfun',
+    stack: 'nextjs tailwind typescript next-auth',
+    github: 'https://github.com/efezinoidisi/movies-fun-app',
+    preview: 'https://zee-movies.vercel.app',
+    src: 'hero-desktop.png',
+    brief:
+      'Explore the latest information about movies, tv shows and people in this fun web application.',
+  },
 ];
 export const teamProjects: Works[] = [
   {
