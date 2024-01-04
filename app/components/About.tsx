@@ -45,6 +45,7 @@ export default function About({ page = '' }: { page?: string }) {
             height={0}
             sizes='60vw'
             className='w-full md:w-2/3 rounded-full border-2 border-purple animate-move'
+            unoptimized
           />
         </div>
       </div>

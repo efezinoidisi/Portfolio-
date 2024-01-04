@@ -95,6 +95,7 @@ export default function Hero() {
               width={200}
               height={200}
               className='border-2 rounded-e-3xl border-gray'
+              unoptimized
             />
           </motion.div>
         </div>

@@ -25,6 +25,7 @@ export default function Card(props: CardProps) {
         height={0}
         sizes='30%'
         className='h-1/3 w-full border-b border-gray'
+        unoptimized
       />
       <p className='border-b border-gray py-2 capitalize text-base px-1'>
         {stack}
