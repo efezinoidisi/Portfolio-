@@ -108,7 +108,7 @@ export default function ContactForm() {
         options={{
           required: {
             value: true,
-            message: 'please provide your message',
+            message: 'message cannot be empty',
           },
           minLength: {
             value: 10,
@@ -119,7 +119,7 @@ export default function ContactForm() {
         placeholder={'hello Efezino, I would...'}
       />
       <Button
-        styles='flex gap-2 capitalize text-lg border py-2 px-4 w-fit mt-2 items-center btn border-purple rounded-lg disabled:'
+        styles='flex gap-2 capitalize text-lg border py-2 px-4 w-fit mt-2 items-center btn border-purple rounded-lg disabled:border-gray'
         type='submit'
       >
         send

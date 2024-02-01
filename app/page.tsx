@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       {/* add work experience */}
       <Projects projects={threeProjects} page='home' heading='projects' />
-      <About page='home' />
+      <About showHeading />
       <Contact page='home' />
     </main>
   );

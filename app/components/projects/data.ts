@@ -18,7 +18,7 @@ export const projects: Works[] = [
     preview: 'https://dutycircle.vercel.app/',
     src: 'dutycircle.png',
     brief:
-      'An application designed to merge task management with public accountability. Users can create and manage personal tasks while also choosing to share them publicly.',
+      'An application where users can create and manage personal tasks while also choosing to share them publicly.',
   },
   {
     id: 2,

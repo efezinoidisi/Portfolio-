@@ -30,8 +30,12 @@ export default function NavLinks({
           <Link
             href={`${href}`}
             key={name}
-            className={`after:content-[""] after:absolute relative after:bg-white after:bottom-0 after:hover:border after:hover:animate-nav group active:text-yellow transform w-fit hover:scale-[0.9] transition-transform delay-75 ${
-              isActive ? 'text-white' : 'text-gray'
+            className={`after:content-[""] after:absolute relative  after:bottom-0 after:hover:border-b-4 
+            after:hover:border-purple/70
+            after:hover:animate-nav group active:text-yellow transform w-fit  transition-all delay-75 py-2 ${
+              isActive
+                ? 'text-purple border-b-4 hover:border-b-0 border-purple'
+                : 'text-gray'
             }`}
             onClick={handleClick}
           >

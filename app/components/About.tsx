@@ -1,23 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import ScrollAnimate from './ScrollAnimate';
+import Heading from './Heading';
 
-export default function About({ page = '' }: { page?: string }) {
+export default function About({
+  showHeading = false,
+}: {
+  showHeading?: boolean;
+}) {
   return (
     <ScrollAnimate
       id='about'
-      className={`${page && 'my-10 h-screen'} flex flex-col justify-evenly`}
+      className={`${showHeading && 'my-10 '} flex flex-col justify-evenly`}
     >
-      {page && (
-        <h2 className='heading'>
-          <span className='text-purple'>#</span>about-me
-        </h2>
-      )}
+      {showHeading && <Heading value='about-me' />}
       <div className='flex items-center justify-start small-dots-left flex-col-reverse md:flex-row '>
         <div className='basis-3/5 flex flex-col gap-5  md:max-w-xl'>
           <p
-            className={`leading-8 mt-5 md:m-0 tracking-widest md:tracking-normal text-sm md: ${
-              page && 'mb-9'
+            className={`leading-7 md:leading-8 mt-5 md:m-0 tracking-wide  text-base  ${
+              showHeading && 'mb-9'
             }`}
           >
             {' '}
@@ -27,7 +28,7 @@ export default function About({ page = '' }: { page?: string }) {
             skills and expertise to exciting projects. Let&#39;s create
             something amazing together!
           </p>
-          {page && (
+          {showHeading && (
             <Link
               href={'/about'}
               className='border border-purple px-3 py-2 rounded btn w-fit'

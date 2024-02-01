@@ -7,17 +7,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sl: '500px',
+      },
       colors: {
         gray: '#ABB2BF',
         purple: '#C778DD',
         'sky-blue': '#62AEEF',
         yellow: '#E5C07A',
-      },
-      backgroundImage: {
-        dots: 'url("/dots.svg")',
-        'two-dots': '[url("/dots.svg"), url("/dots.svg")]',
-      },
-      backgroundColor: {
         body: '#282C33',
         gray: '#ABB2BF',
         teal: '#55B6C2',
@@ -26,13 +23,19 @@ module.exports = {
         'sky-blue': '#62AEEF',
         yellow: '#E5C07A',
       },
-      borderColor: {
-        gray: '#ABB2BF',
+      backgroundImage: {
+        dots: 'url("/dots.svg")',
+        'two-dots': '[url("/dots.svg"), url("/dots.svg")]',
+        shine:
+          'linear-gradient(270deg, #C778DD -7.86%, rgba(201, 0, 193, 0.00) 91.6%)',
       },
       backgroundSize: {
         small: '10rem 100%',
         smallest: '4rem 50%',
         normal: '50%',
+      },
+      boxShadow: {
+        ml: '3px 3px #C778DD',
       },
       animation: {
         nav: 'slide 0.5s ease-in-out forwards 1',

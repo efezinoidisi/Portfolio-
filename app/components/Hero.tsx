@@ -51,18 +51,17 @@ export default function Hero() {
     >
       <div className='flex flex-col-reverse md:flex-row justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0'>
         <div className='md:basis-3/5 flex flex-col'>
-          <p className='mb-6  tracking-wider leading-8 md:text-left md:tracking-wider max-w-xl'>
-            <motion.span
+          <p className='mb-6  tracking-wider leading-8 md:text-left md:tracking-wider max-w-xl '>
+            {/* <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className='font-medium text-lg'
               transition={{ duration: 1.1, type: 'spring', delay: 0.6 }}
             >
-              Efezino
             </motion.span>{' '}
-            is a{' '}
+            is a{' '} */}
             <motion.span
-              className='inline-block text-purple text-2xl'
+              className='inline-block text-purple text-2xl capitalize font-bold'
               initial={{ x: '-80', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.5, type: 'spring', delay: 1 }}
@@ -70,15 +69,13 @@ export default function Hero() {
               frontend developer{' '}
             </motion.span>
             {` skilled in building interactive web interfaces, With a flair for
-            user-centric design. She transforms ideas into captivating websites.
-            Her collaborative approach turns your concepts into engaging online
-            realities.`}
+            user-centric design. Transforming designs into captivating websites and web applications.`}
           </p>
           <Link
             href={'/contact'}
             className='border-2 text-white font-mono uppercase border-purple py-2 px-5 rounded-md transform btn w-fit self-center md:self-start'
           >
-            Contact me!
+            hire me!
           </Link>
         </div>
 

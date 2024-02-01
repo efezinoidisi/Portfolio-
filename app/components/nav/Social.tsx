@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FaGithub, FaTwitter } from 'react-icons/fa6';
-import { BsLinkedin } from 'react-icons/bs';
+import { BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 
 type MySocials = {
   id: number;
@@ -30,6 +30,12 @@ const Socials = ({ size = 'text-3xl' }: { size?: string }) => {
       link: 'https://www.linkedin.com/in/endurance-idisi/',
       icon: <BsLinkedin className='text-blue-600' />,
     },
+    {
+      id: 3,
+      name: 'whatsApp',
+      link: 'https://wa.me/23408169209097',
+      icon: <BsWhatsapp className='text-green-600' />,
+    },
   ];
 
   const iconLinks = mySocials.map(({ id, icon, name, link }: MySocials) => (
@@ -45,11 +51,7 @@ const Socials = ({ size = 'text-3xl' }: { size?: string }) => {
       {icon}
     </Link>
   ));
-  return (
-    <div className='flex md:flex-col gap-5 items-center self-center'>
-      {iconLinks}
-    </div>
-  );
+  return <div className='flex md:flex-col gap-5 items-center'>{iconLinks}</div>;
 };
 
 export default Socials;

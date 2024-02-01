@@ -16,7 +16,7 @@ export default function About() {
     <main className='md:ml-16 p-5'>
       <h2 className='uppercase font-mono text-xl mb-7'>about</h2>
       {/* integrate spotify? */}
-      <Me page='' />
+      <Me />
       <br />
       <br />
       <div className=''>

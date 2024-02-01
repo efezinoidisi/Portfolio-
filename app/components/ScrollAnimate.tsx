@@ -12,7 +12,7 @@ type Props = {
 export default function ScrollAnimate(props: Props) {
   const { children, ...others } = props;
   const ref = useRef(null);
-  const elementInView = useInView(ref, { once: true, amount: 0.1 });
+  const elementInView = useInView(ref, { amount: 0.1 });
 
   const variants = {
     hidden: { opacity: 0, y: 75 },
@@ -25,6 +25,7 @@ export default function ScrollAnimate(props: Props) {
     if (elementInView) {
       mainControls.start('visible');
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [elementInView]);
 
   return (
