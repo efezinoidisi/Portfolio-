@@ -2,16 +2,6 @@ import Me from '@/components/About';
 import { AboutMe } from '@/types/about';
 
 export default function About() {
-  const randomFacts: AboutMe[] = [
-    {
-      id: 0,
-      fact: "I'm an introvert",
-    },
-    {
-      id: 1,
-      fact: 'I love music',
-    },
-  ];
   return (
     <main className='md:ml-16 p-5'>
       <h2 className='uppercase font-mono text-xl mb-7'>about</h2>
@@ -32,3 +22,14 @@ export default function About() {
     </main>
   );
 }
+
+const randomFacts: AboutMe[] = [
+  {
+    id: 0,
+    fact: 'I spend my free time watching kdramas or reading romance novels.',
+  },
+  {
+    id: 1,
+    fact: 'I sometimes have my music on while coding. It helps me focus better. oh and I love music!',
+  },
+];

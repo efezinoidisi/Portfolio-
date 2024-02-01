@@ -17,7 +17,7 @@ export default function Card(props: CardProps) {
     'border border-gray w-full sl:w-fit px-4 py-1 rounded flex justify-center items-center gap-2 hover:border-none hover:bg-purple/50 transition-colors duration-200 ease-in-out overflow-hidden hover:scale-105 hover:text-white';
   return (
     <ScrollAnimate
-      className={`border-2 rounded-lg border-gray/40 overflow-hidden min-h-fit shadow-ml hover:shadow-gray transition-colors ease-linear duration-200 block group pb-4 even:shadow-yellow`}
+      className={`border-2 rounded-lg border-gray/40 overflow-hidden min-h-fit shadow-ml hover:shadow-gray transition-colors ease-linear duration-200 block group pb-4 even:shadow-yellow/80 shadow-purple/80`}
     >
       <div className='h-40 w-full border-b overflow-hidden'>
         <Image

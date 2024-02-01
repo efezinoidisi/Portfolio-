@@ -11,7 +11,7 @@ export default function Projects(props: {
   const { projects, page = '', heading } = props;
   return (
     <section id='projects' className='flex flex-col justify-between'>
-      <Heading value='projects' />
+      <Heading value={heading} />
 
       <div className='grid sl:grid-cols-2 md:grid-cols-3 gap-y-8 gap-3 md:gap-4 lg:gap-5'>
         {projects?.map((project, index) => (

@@ -13,7 +13,7 @@ export default function Contact({ page = '' }: { page?: string }) {
   return (
     <ScrollAnimate id='contact' className='flex flex-col'>
       {page && <Heading value='contact-me' />}
-      <p className='leading-8  self-center md:self-start md:max-w-full'>
+      <p className='leading-8  self-center md:self-start md:max-w-full lg:max-w-[60%]'>
         If you require a developer&#39;s expertise or are interested in
         establishing a connection for potential collaboration, please don&#39;t
         hesitate to reach out. Whether it&#39;s about joint projects, shared

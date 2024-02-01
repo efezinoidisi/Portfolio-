@@ -1,6 +1,11 @@
 'use client';
 
-import { motion, useInView, useAnimation } from 'framer-motion';
+import {
+  motion,
+  useInView,
+  useAnimation,
+  AnimatePresence,
+} from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 type Props = {
@@ -17,6 +22,7 @@ export default function ScrollAnimate(props: Props) {
   const variants = {
     hidden: { opacity: 0, y: 75 },
     visible: { opacity: 1, y: 0 },
+    exit: { opacity: 0 },
   };
 
   const mainControls = useAnimation();
@@ -25,19 +31,23 @@ export default function ScrollAnimate(props: Props) {
     if (elementInView) {
       mainControls.start('visible');
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [elementInView]);
 
   return (
-    <motion.section
-      ref={ref}
-      initial='hidden'
-      variants={variants}
-      animate={mainControls}
-      transition={{ duration: 0.5, delay: 0.25 }}
-      {...others}
-    >
-      {children}
-    </motion.section>
+    <AnimatePresence mode='wait'>
+      <motion.section
+        ref={ref}
+        initial='hidden'
+        variants={variants}
+        animate={mainControls}
+        transition={{ duration: 0.5, delay: 0.25 }}
+        exit={'exit'}
+        {...others}
+      >
+        {children}
+      </motion.section>
+    </AnimatePresence>
   );
 }

@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     'a dedicated frontend developer with a passion for creating exceptional, responsive, and user-friendly web applications',
 };
 
+const variants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 },
+};
+
 export default function RootLayout({
   children,
 }: {

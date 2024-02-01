@@ -8,8 +8,8 @@ import {
 export default function Projects() {
   return (
     <main className='md:ml-16 p-5'>
-      <h2 className='uppercase text-xl font-mono pb-2'>my projects</h2>
-      <p className='mb-5 text-sm'>a list of all my projects</p>
+      <h2 className='uppercase text-xl font-mono pb-2 sr-only'>my projects</h2>
+      {/* <p className='mb-5 text-sm'>a list of all my projects</p> */}
       <Works projects={projects} heading='main-projects' />
       <br />
       <br />

@@ -45,7 +45,7 @@ export default function About({
             width={0}
             height={0}
             sizes='60vw'
-            className='w-full md:w-2/3 rounded-full border-2 border-purple animate-move'
+            className='w-2/3 md:w-2/3 rounded-full border-2 border-purple animate-move'
             unoptimized
           />
         </div>
