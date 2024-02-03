@@ -4,45 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import ScrollAnimate from './ScrollAnimate';
 
-type Skill = {
-  id: number;
-  title: string;
-  content: string;
-};
-
-const Skills = () => {
-  const skills: Skill[] = [
-    {
-      id: 0,
-      title: 'languages',
-      content: 'typescript javascript',
-    },
-    {
-      id: 1,
-      title: 'frameworks',
-      content: 'react next-js tailwind styled-components',
-    },
-    {
-      id: 2,
-      title: 'tools',
-      content: 'git github',
-    },
-  ];
-
-  return (
-    <>
-      {skills.map(({ title, id, content }: Skill) => (
-        <div className='border border-gray basis-[40%]' key={id}>
-          <h3 className='border-b border-gray p-1 text-base text-white'>
-            {title}
-          </h3>
-          <p className='py-4 text-sm px-1 leading-7'>{content}</p>
-        </div>
-      ))}
-    </>
-  );
-};
-
 export default function Hero() {
   return (
     <ScrollAnimate
@@ -66,14 +27,14 @@ export default function Hero() {
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.5, type: 'spring', delay: 1 }}
             >
-              frontend developer{' '}
+              frontend software engineer{' '}
             </motion.span>
             {` skilled in building interactive web interfaces, With a flair for
             user-centric design. Transforming designs into captivating websites and web applications.`}
           </p>
           <Link
             href={'/contact'}
-            className='border-2 text-white font-mono uppercase border-purple py-2 px-5 rounded-md transform btn w-fit self-center md:self-start'
+            className='border-2 text-purple font-bold text-lg font-mono uppercase hover:border-gray border-purple py-2 px-5 rounded-md transform btn w-fit self-center md:self-start'
           >
             hire me!
           </Link>
@@ -97,9 +58,50 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-      <div className='self-end flex items-center flex-wrap justify-center md:justify-end gap-3'>
-        <Skills />
-      </div>
+
+      <Skills />
     </ScrollAnimate>
   );
 }
+
+type Skill = {
+  id: number;
+  title: string;
+  content: string;
+};
+
+const Skills = () => {
+  const skills: Skill[] = [
+    {
+      id: 0,
+      title: 'languages',
+      content: 'typescript javascript html css',
+    },
+    {
+      id: 1,
+      title: 'frameworks',
+      content: 'react next-js tailwind styled-components',
+    },
+    {
+      id: 2,
+      title: 'tools',
+      content: 'git github figma-dev',
+    },
+  ];
+
+  return (
+    <ul className='self-end grid grid-cols-2 items-center flex-wrap justify-center md:justify-end gap-3'>
+      {skills.map(({ title, id, content }: Skill) => (
+        <li
+          className='border border-gray/90 last:col-start-2 first:row-start-2 [&:nth-child(2)]:row-start-3 last:row-start-2 first:row-span-2 max-w-[14rem]'
+          key={id}
+        >
+          <h3 className='border-b border-gray/80 py-2 px-3 capitalize text-base text-white'>
+            {title}
+          </h3>
+          <p className='py-4 text-sm px-3 leading-7'>{content}</p>
+        </li>
+      ))}
+    </ul>
+  );
+};

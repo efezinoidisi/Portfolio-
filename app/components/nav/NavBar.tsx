@@ -55,7 +55,7 @@ export default function NavBar() {
           className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-sm md:text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 border-r-4 border-b-4 border-r-purple border-b-purple'
           download
         >
-          resume
+          resumé
         </a>
       </>
 

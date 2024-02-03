@@ -1,11 +1,6 @@
 'use client';
 
-import {
-  motion,
-  useInView,
-  useAnimation,
-  AnimatePresence,
-} from 'framer-motion';
+import { motion, useInView, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 type Props = {
@@ -36,18 +31,16 @@ export default function ScrollAnimate(props: Props) {
   }, [elementInView]);
 
   return (
-    <AnimatePresence mode='wait'>
-      <motion.section
-        ref={ref}
-        initial='hidden'
-        variants={variants}
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
-        exit={'exit'}
-        {...others}
-      >
-        {children}
-      </motion.section>
-    </AnimatePresence>
+    <motion.section
+      ref={ref}
+      initial='hidden'
+      variants={variants}
+      animate={mainControls}
+      transition={{ duration: 0.5, delay: 0.25 }}
+      exit={'exit'}
+      {...others}
+    >
+      {children}
+    </motion.section>
   );
 }

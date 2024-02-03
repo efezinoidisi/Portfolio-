@@ -17,7 +17,7 @@ export default function Card(props: CardProps) {
     'border border-gray w-full sl:w-fit px-4 py-1 rounded flex justify-center items-center gap-2 hover:border-none hover:bg-purple/50 transition-colors duration-200 ease-in-out overflow-hidden hover:scale-105 hover:text-white';
   return (
     <ScrollAnimate
-      className={`border-2 rounded-lg border-gray/40 overflow-hidden min-h-fit shadow-ml hover:shadow-gray transition-colors ease-linear duration-200 block group pb-4 even:shadow-yellow/80 shadow-purple/80`}
+      className={`border-2 rounded-lg border-gray/40 overflow-hidden min-h-fit hover:shadow-ml transition-colors ease-linear duration-200 block group pb-4`}
     >
       <div className='h-40 w-full border-b overflow-hidden'>
         <Image
@@ -30,14 +30,14 @@ export default function Card(props: CardProps) {
           unoptimized
         />
       </div>
-      <p className='border-b border-gray py-2 capitalize text-base px-1'>
+      <p className='border-b border-gray py-2 capitalize text-base text-center px-2'>
         {stack}
       </p>
-      <div className='px-2 pt-4'>
-        <h3 className='text-2xl capitalize font-medium text-white pb-3 pt-2'>
+      <div className='px-3 pt-4'>
+        <h3 className='text-2xl capitalize font-medium text-white pb-3 pt-2 text-pretty leading-8'>
           {name}
         </h3>
-        <p>{brief}</p>
+        <p className='leading-7 md:leading-8'>{brief}</p>
         <div className='flex items-center gap-2 pt-3'>
           <Link href={github} className={linkStyle}>
             github <FaGithub />
