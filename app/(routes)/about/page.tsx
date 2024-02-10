@@ -4,16 +4,14 @@ import { AboutMe } from '@/types/about';
 export default function About() {
   return (
     <main className='md:ml-16 p-5'>
-      <h2 className='uppercase font-mono text-xl mb-7'>about</h2>
-      {/* integrate spotify? */}
-      <Me />
+      <Me hideLink />
       <br />
       <br />
       <div className=''>
-        <h3 className='heading my-6'>
+        <h3 className='heading mb-9 capitalize font-bold text-lg after:content-[""] after:absolute after:-bottom-1 after:border-purple h-fit after:border-b-4 after:w-32 after:left-10 w-full relative text-white'>
           <span className='text-purple'>#</span>random-facts
         </h3>
-        <ul className='list-disc list-inside flex flex-col gap-2'>
+        <ul className='list-disc list-inside flex flex-col gap-2 px-7'>
           {randomFacts.map(({ id, fact }: AboutMe) => (
             <li key={id}>{fact}</li>
           ))}
@@ -26,10 +24,10 @@ export default function About() {
 const randomFacts: AboutMe[] = [
   {
     id: 0,
-    fact: 'I spend my free time watching kdramas or reading romance novels.',
+    fact: 'I spend my free time watching kdramas/animes or reading romance novels.',
   },
   {
     id: 1,
-    fact: 'I sometimes have my music on while coding. It helps me focus better. oh and I love music!',
+    fact: 'I love music',
   },
 ];

@@ -28,8 +28,28 @@ body {
   @apply bg-yellow
 }
 
+.scroll-watcher {
+  height: .4rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(199 120 221);
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll(y);
+}
+
+
 @media screen and (min-width: 765px) {
   .heading::after {
     @apply w-96
+  }
+}
+
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
   }
 }

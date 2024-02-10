@@ -12,7 +12,7 @@ type Props = {
 export default function ScrollAnimate(props: Props) {
   const { children, ...others } = props;
   const ref = useRef(null);
-  const elementInView = useInView(ref, { amount: 0.1 });
+  const elementInView = useInView(ref, { amount: 0.1, once: true });
 
   const variants = {
     hidden: { opacity: 0, y: 75 },

@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import ScrollAnimate from '../ScrollAnimate';
 import ContactForm from './ContactForm';
 import { HiOutlineMail } from 'react-icons/hi';
@@ -9,7 +8,7 @@ import Heading from '../Heading';
 export default function Contact({ page = '' }: { page?: string }) {
   // styles for the contact information links
   const link =
-    'flex gap-2 items-center pb-2 text-purple hover:text-white/90 hover:scale-105 hover:underline ease-linear transition-colors duration-200';
+    'flex gap-2 items-center pb-2 hover:text-purple/90 hover:scale-105 hover:underline ease-linear transition-colors duration-200';
   return (
     <ScrollAnimate id='contact' className='flex flex-col'>
       {page && <Heading value='contact-me' />}
@@ -22,7 +21,7 @@ export default function Contact({ page = '' }: { page?: string }) {
       </p>
 
       <section className='flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0 w-full py-5 md:py-10'>
-        <div className='border-t border-l w-fit px-4 self-center mt-5 py-5 rounded-md shadow-ml'>
+        <div className='border-b border-r w-fit px-4 self-center mt-5 py-5 rounded-md shadow-ml'>
           <h3 className='text-white py-3 capitalize text-lg font-bold'>{`contact information`}</h3>
 
           <Link

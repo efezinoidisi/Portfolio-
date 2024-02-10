@@ -4,12 +4,12 @@ export const projects: Works[] = [
   {
     id: 1,
     name: 'Ecommerce web app',
-    stack: 'nextjs tailwind typescript',
+    stack: 'nextjs tailwind typescript supabase',
     github: 'https://github.com/efezinoidisi/furniture-app',
     preview: 'https://furniture-app-henna.vercel.app/',
     src: 'furniture.png',
     brief:
-      'An Ecommerce web application where customers can view products, add product to cart, remove product from cart and checkout. (still in development)',
+      "I'm building this Ecommerce web application where customers can view products, add product to cart, remove product from cart and checkout to explore supabase. (still in development)",
   },
 
   {
@@ -20,12 +20,12 @@ export const projects: Works[] = [
     preview: 'https://zee-movies.vercel.app',
     src: 'hero-desktop.png',
     brief:
-      'A web application that provides the latest imformation about movies, tv shows and celebrities. users are also able to keep track of their favorite list and watchlist.',
+      'I built this movie web application that provides the latest imformation about movies, tv shows and celebrities to master Nextjs and  learn NextAuth.',
   },
   {
     id: 0,
     name: 'web developer portfolio',
-    stack: 'nextjs tailwind typescript',
+    stack: 'nextjs tailwind typescript framer-motion ',
     github: 'https://github.com/efezinoidisi/Portfolio-',
     preview: 'https://efezino-portfolio.vercel.app/',
     src: 'portfolio.png',
@@ -75,7 +75,7 @@ export const sideProjects: Works[] = [
     preview: 'https://fun-todo.netlify.app/',
     src: 'todo.png',
     brief:
-      'A CRUD application that assists users keep track of their todo list.',
+      'I built this simple CRUD application that helps users keep track of their todo list to learn typescript and styled components.',
   },
   {
     id: 1,
@@ -93,6 +93,6 @@ export const sideProjects: Works[] = [
     github: 'https://github.com/efezinoidisi/link-task1',
     preview: 'https://linktree-task.netlify.app/',
     src: 'linktree-task.png',
-    brief: 'An SPA react web application',
+    brief: 'I built this SPA react web application to learn react',
   },
 ];

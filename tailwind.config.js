@@ -10,6 +10,11 @@ module.exports = {
       screens: {
         sl: '500px',
       },
+      fontFamily: {
+        inter: 'var(--font-inter)',
+        'ubuntu-mono': 'var(--font-ubuntu-mono)',
+        'fira-code': 'var(--font-fira-code)',
+      },
       colors: {
         gray: '#ABB2BF',
         purple: '#C778DD',
@@ -35,7 +40,7 @@ module.exports = {
         normal: '50%',
       },
       boxShadow: {
-        ml: '3px 3px #C778DD',
+        ml: '-3px -3px 3px #C778DD',
       },
       animation: {
         nav: 'slide 0.5s ease-in-out forwards 1',

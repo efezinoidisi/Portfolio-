@@ -1,22 +1,43 @@
-import Works from '@/components/projects/Projects';
+import Projects from '@/components/projects/Projects';
 import {
   projects,
   sideProjects,
   teamProjects,
 } from '@/components/projects/data';
+import { Works } from '@/types/project';
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
     <main className='md:ml-16 p-5'>
-      <h2 className='uppercase text-xl font-mono pb-2 sr-only'>my projects</h2>
-      {/* <p className='mb-5 text-sm'>a list of all my projects</p> */}
-      <Works projects={projects} heading='main-projects' />
-      <br />
-      <br />
-      <Works projects={teamProjects} heading='team-projects' />
-      <br />
-      <br />
-      <Works projects={sideProjects} heading='side-projects' />
+      <h1 className='uppercase text-xl font-mono pb-2 text-white'>projects</h1>
+      <p className='mb-5 text-base leading-10'>
+        Here are some of the projects I built while learning a new framework or
+        library and also during my bootcamps/internships
+      </p>
+      <div className='flex flex-col gap-y-10'>
+        {allProjects.map((project) => (
+          <Projects
+            key={project.heading}
+            heading={project.heading}
+            projects={project.list}
+          />
+        ))}
+      </div>
     </main>
   );
 }
+
+const allProjects: { heading: string; list: Works[] }[] = [
+  {
+    heading: 'main-projects',
+    list: projects,
+  },
+  {
+    heading: 'team-projects',
+    list: teamProjects,
+  },
+  {
+    heading: 'side-projects',
+    list: sideProjects,
+  },
+];

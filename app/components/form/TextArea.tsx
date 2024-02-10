@@ -17,12 +17,12 @@ export default function TextArea(props: Props) {
       <textarea
         id={id}
         {...register(id, options)}
-        className='w-full bg-inherit border-b outline-none peer placeholder-transparent placeholder-shown:mt-0 mt-2 text-white border-gray focus-visible:border-purple'
+        className='w-full bg-inherit border outline-none peer placeholder-transparent placeholder-shown:mt-0 mt-2 text-white border-gray focus-visible:border-purple p-2'
         placeholder={placeholder}
       ></textarea>
       <label
         htmlFor={id}
-        className={`capitalize absolute left-0 transition-all peer-placeholder-shown:top-2 peer-focus:-top-3.5  duration-300 text-base -top-3.5 peer-focus-visible:text-purple`}
+        className={`capitalize absolute left-2 transition-all peer-placeholder-shown:top-2 peer-focus:-top-3.5  duration-300 text-base -top-3.5 bg-body peer-focus-visible:text-purple`}
       >
         {label}
       </label>

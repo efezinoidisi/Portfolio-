@@ -34,7 +34,7 @@ export default function Input(props: InputProps) {
       />
       <label
         htmlFor={id}
-        className={`capitalize absolute left-0 transition-all peer-placeholder-shown:top-2 peer-focus:-top-3.5  duration-300 text-base peer-focus-visible:text-purple -top-3.5`}
+        className={`capitalize absolute left-2 transition-all peer-placeholder-shown:top-2 peer-focus:-top-3.5  duration-300 text-base peer-focus-visible:text-purple -top-3.5`}
       >
         {label}
       </label>

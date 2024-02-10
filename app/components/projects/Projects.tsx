@@ -10,14 +10,18 @@ export default function Projects(props: {
 }) {
   const { projects, page = '', heading } = props;
   return (
-    <section id='projects' className='flex flex-col justify-between'>
-      <Heading value={heading} />
+    <section
+      id='projects'
+      className='flex flex-col justify-between'
+      aria-labelledby='a list showing some of my projects'
+    >
+      <Heading value={heading} size='text-lg' />
 
-      <div className='grid sl:grid-cols-2 md:grid-cols-3 gap-y-8 gap-3 md:gap-4 lg:gap-5'>
-        {projects?.map((project, index) => (
-          <Card key={project.id} {...project} index={index} page={page} />
+      <ul className='grid sl:grid-cols-2 lg:grid-cols-3 gap-y-8 gap-3 md:gap-4 lg:gap-5'>
+        {projects?.map((project) => (
+          <Card key={project.id} {...project} />
         ))}
-      </div>
+      </ul>
 
       {page === 'home' && (
         <Link

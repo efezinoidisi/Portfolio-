@@ -12,37 +12,29 @@ export default function Hero() {
     >
       <div className='flex flex-col-reverse md:flex-row justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0'>
         <div className='md:basis-3/5 flex flex-col'>
-          <p className='mb-6  tracking-wider leading-8 md:text-left md:tracking-wider max-w-xl '>
-            {/* <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className='font-medium text-lg'
-              transition={{ duration: 1.1, type: 'spring', delay: 0.6 }}
-            >
-            </motion.span>{' '}
-            is a{' '} */}
+          <p className='mb-6  tracking-wider leading-10 md:text-left md:tracking-wider max-w-xl text-lg'>
             <motion.span
               className='inline-block text-purple text-2xl capitalize font-bold'
               initial={{ x: '-80', opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 1.5, type: 'spring', delay: 1 }}
             >
-              frontend software engineer{' '}
+              frontend web developer{' '}
             </motion.span>
-            {` skilled in building interactive web interfaces, With a flair for
-            user-centric design. Transforming designs into captivating websites and web applications.`}
+            {` who is passionate about coding and loves building interative user interfaces.`}
           </p>
           <Link
             href={'/contact'}
             className='border-2 text-purple font-bold text-lg font-mono uppercase hover:border-gray border-purple py-2 px-5 rounded-md transform btn w-fit self-center md:self-start'
           >
-            hire me!
+            connect with me!
           </Link>
         </div>
 
         <div className='md:basis-2/5 bg-dots bg-smallest bg-no-repeat bg-right-bottom flex justify-center'>
           <motion.div
-            className='after:content-[""] relative after:-left-2 md:after:left-10 after:bg-gradient-to-tr after:from-purple after:to-gray after:absolute after:-right-2 md:after:-right-5 after:opacity-[0.4] md:after:top-10 after:-bottom-2 md:after:-bottom-5 w-fit after:-z-10 z-10 after:border-2 after:rounded-e-3xl my-10 after:top-5 after:border-gray'
+            className='after:content-[""] relative after:-left-2 after:bg-gradient-to-tr after:from-purple after:to-gray after:absolute after:-right-2
+            md:after:-inset-3 after:opacity-[0.4]  after:-bottom-2 w-fit after:-z-10 z-10 after:border-2 after:rounded-e-3xl my-10 after:top-5 after:border-gray'
             initial={{ y: '100', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.5, delay: 0.5, type: 'spring' }}
