@@ -34,11 +34,16 @@ export default function NavBar() {
 
   return (
     <header className='flex items-center sticky top-0 bg-body md:ml-16 justify-between p-5 z-50 md:pr-14 bg-opacity-95 '>
-      <Button handleClick={handleMenu} styles='md:hidden'>
+      <Button
+        handleClick={handleMenu}
+        styles='md:hidden'
+        aria-labelledby='open navigation menu'
+      >
         <CgMenuRight className={`${iconStyle} rotate-180`} />
       </Button>
       <Link
         href={'/'}
+        aria-label='home'
         className='text-3xl font-bold flex items-center relative after:content-[""] after:absolute after:top-0  after:size-12 after:bg-shine after:blur-2xl after:rounded-full after:left-0 after:-z-10 hover:scale-95 transition-transform duration-200 ease-out'
       >
         <Logo />
@@ -53,6 +58,7 @@ export default function NavBar() {
         <a
           href='/resume/Endurance_idisi_resume.pdf'
           className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-sm md:text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 border-r-4 border-b-4 border-r-purple border-b-purple'
+          aria-labelledby='download my resumé'
           download
         >
           resumé
@@ -81,7 +87,11 @@ export default function NavBar() {
               <div className='flex items-center justify-between w-full'>
                 <Logo />
 
-                <Button handleClick={handleMenu} styles='md:hidden'>
+                <Button
+                  handleClick={handleMenu}
+                  styles='md:hidden'
+                  aria-labelledby='close navigation menu'
+                >
                   <CgClose className={iconStyle} />
                 </Button>
               </div>

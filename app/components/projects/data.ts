@@ -20,7 +20,7 @@ export const projects: Works[] = [
     preview: 'https://zee-movies.vercel.app',
     src: 'hero-desktop.png',
     brief:
-      'I built this movie web application that provides the latest imformation about movies, tv shows and celebrities to master Nextjs and  learn NextAuth.',
+      'I built this movie web application that provides the latest information about movies, tv shows and celebrities to master Nextjs and  learn NextAuth.',
   },
   {
     id: 0,
