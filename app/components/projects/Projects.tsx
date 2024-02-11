@@ -13,7 +13,7 @@ export default function Projects(props: {
     <section
       id='projects'
       className='flex flex-col justify-between'
-      aria-labelledby='a list showing some of my projects'
+      aria-label='projects section'
     >
       <Heading value={heading} size='text-lg' />
 

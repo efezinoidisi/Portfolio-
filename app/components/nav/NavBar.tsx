@@ -37,13 +37,16 @@ export default function NavBar() {
       <Button
         handleClick={handleMenu}
         styles='md:hidden'
-        aria-labelledby='open navigation menu'
+        aria-label='open navigation menu'
+        aria-controls='menu-container'
+        aria-expanded='false'
+        aria-haspopup='true'
+        id='open-menu'
       >
         <CgMenuRight className={`${iconStyle} rotate-180`} />
       </Button>
       <Link
         href={'/'}
-        aria-label='home'
         className='text-3xl font-bold flex items-center relative after:content-[""] after:absolute after:top-0  after:size-12 after:bg-shine after:blur-2xl after:rounded-full after:left-0 after:-z-10 hover:scale-95 transition-transform duration-200 ease-out'
       >
         <Logo />
@@ -57,8 +60,8 @@ export default function NavBar() {
       <>
         <a
           href='/resume/Endurance_idisi_resume.pdf'
-          className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-sm md:text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 border-r-4 border-b-4 border-r-purple border-b-purple'
-          aria-labelledby='download my resumé'
+          className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-sm md:text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 text-purple'
+          aria-label='download my pdf format resumé'
           download
         >
           resumé
@@ -77,6 +80,7 @@ export default function NavBar() {
             initial={{ width: 0 }}
             animate={{ width: '70%' }}
             className='fixed top-0 bottom-0 bg-gray-500 z-50 bg-body border-r rounded-r-3xl border-purple left-0  p-5  transform transition-transform'
+            id='menu-container'
           >
             <motion.div
               initial='initial'
@@ -90,7 +94,9 @@ export default function NavBar() {
                 <Button
                   handleClick={handleMenu}
                   styles='md:hidden'
-                  aria-labelledby='close navigation menu'
+                  aria-label='close navigation menu'
+                  aria-expanded='false'
+                  role='menuitem'
                 >
                   <CgClose className={iconStyle} />
                 </Button>

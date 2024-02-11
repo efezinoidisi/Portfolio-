@@ -9,7 +9,7 @@ export const projects: Works[] = [
     preview: 'https://furniture-app-henna.vercel.app/',
     src: 'furniture.png',
     brief:
-      "I'm building this Ecommerce web application where customers can view products, add product to cart, remove product from cart and checkout to explore supabase. (still in development)",
+      'I built this E-commerce web application to explore Supabase. (still in development)',
   },
 
   {

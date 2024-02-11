@@ -9,10 +9,12 @@ export default function Heading({
 }: HeadingProps) {
   return (
     <h2
-      className={`heading mb-9 capitalize font-bold  after:content-[""] after:absolute after:-bottom-1 after:border-purple h-fit after:border-b-4 after:w-1/3 md:after:w-1/5 after:left-10 w-full relative font-ubuntu-mono text-white ${size}`}
+      className={`heading mb-9 capitalize font-bold  after:content-[""] after:absolute after:top-1/2 after:border-purple h-fit after:border-b-2 after:w-full after:-translate-y-1/2 after:left-0 after:-z-10 z-20 w-full relative font-ubuntu-mono text-white text-center ${size}`}
     >
-      <span className='text-purple'>#</span>
-      {value}
+      <span className='text-purple bg-body pl-3' aria-hidden='true'>
+        #
+      </span>
+      <span className='bg-body pr-3'>{value}</span>
     </h2>
   );
 }

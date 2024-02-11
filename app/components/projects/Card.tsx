@@ -19,13 +19,14 @@ export default function Card(props: Works) {
     offset: ['start end', 'end start'],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [0.5, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+
   return (
     <motion.li
-      className={`border-2 rounded-lg border-gray/40 overflow-hidden hover:shadow-ml transition-colors ease-linear duration-200 group pb-4 max-w-[20rem] relative block font-ubuntu-mono`}
+      className={`border-2 rounded-lg border-gray/40 overflow-hidden hover:border-purple/90 transition-colors ease-linear duration-200 group pb-4 max-w-[20rem] relative block font-inter`}
       ref={cardRef}
-      style={{ scale, opacity }}
+      style={{ scale }}
+      transition={{ ease: 'easeInOut' }}
     >
       <div className='h-40 w-full border-b overflow-hidden'>
         <Image
@@ -38,31 +39,20 @@ export default function Card(props: Works) {
           unoptimized
         />
       </div>
-      <p
-        className='border-b border-gray py-5 capitalize text-base text-center px-2 text-white font-inter tracking-wide'
-        aria-labelledby='tech stack used for this project'
-      >
+      <p className='border-b border-gray py-5 capitalize text-base text-center px-2 text-white font-inter tracking-wide '>
         {stack}
       </p>
       <div className='px-3 pt-4 flex flex-col gap-y-3'>
-        <h3 className='text-xl capitalize font-medium text-white text-pretty leading-9 tracking-wider font-fira-code'>
+        <h3 className='text-xl capitalize font-medium text-white text-pretty leading-9 tracking-wide font-fira-code'>
           {name}
         </h3>
-        <p className='leading-8 md:leading-9 text-[1.1rem]'>{brief}</p>
+        <p className='leading-9 tracking-wides text-lg'>{brief}</p>
         <div className='flex items-center gap-2 pt-3'>
-          <Link
-            href={github}
-            className={linkStyle}
-            aria-labelledby={`go to ${name} github page`}
-          >
+          <Link href={github} className={linkStyle}>
             github <FaGithub />
           </Link>
           {preview ? (
-            <Link
-              href={preview}
-              className={linkStyle}
-              aria-labelledby={`visit ${name} project live site`}
-            >
+            <Link href={preview} className={linkStyle}>
               view <FiExternalLink />
             </Link>
           ) : null}

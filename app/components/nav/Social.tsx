@@ -44,7 +44,6 @@ const Socials = ({ size = 'text-3xl' }: { size?: string }) => {
       href={link}
       key={id}
       target='_blank'
-      aria-label={`my ${name} profile`}
       title={name}
       className={`${size} hover:scale-[1.3] transform transition-all duration-75 `}
     >

@@ -16,12 +16,11 @@ module.exports = {
         'fira-code': 'var(--font-fira-code)',
       },
       colors: {
-        gray: '#ABB2BF',
+        gray: '#B4BAC6',
         purple: '#C778DD',
         'sky-blue': '#62AEEF',
         yellow: '#E5C07A',
         body: '#282C33',
-        gray: '#ABB2BF',
         teal: '#55B6C2',
         header: 'rgba(44 ,40, 51, 0.8)',
         bright: '#E06B74',

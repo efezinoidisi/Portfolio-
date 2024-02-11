@@ -8,7 +8,7 @@ import Heading from '../Heading';
 export default function Contact({ page = '' }: { page?: string }) {
   // styles for the contact information links
   const link =
-    'flex gap-2 items-center pb-2 hover:text-purple/90 hover:scale-105 hover:underline ease-linear transition-colors duration-200';
+    'flex gap-2 items-center py-2 hover:text-purple/90 hover:scale-105 hover:underline ease-linear transition-colors duration-200';
   return (
     <ScrollAnimate id='contact' className='flex flex-col'>
       {page && <Heading value='contact-me' />}
