@@ -35,7 +35,7 @@ export default function Card(props: Works) {
       ref={cardRef}
       style={{ scale }}
     >
-      <div className='h-full w-full border-b overflow-hidden'>
+      <div className='h-44 md:h-full w-full border-b overflow-hidden'>
         <Image
           src={`/${src}`}
           alt=''
