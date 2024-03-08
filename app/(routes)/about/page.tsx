@@ -4,10 +4,10 @@ import { AboutMe } from '@/types/about';
 export default function About() {
   return (
     <main className='md:ml-16 p-5'>
-      <Me hideLink />
+      <Me hideLink showLine={false} />
       <br />
       <br />
-      <div className=''>
+      {/* <div className=''>
         <h3 className='heading mb-9 capitalize font-bold text-lg after:content-[""] after:absolute after:-bottom-1 after:border-purple h-fit after:border-b-4 after:w-32 after:left-10 w-full relative text-white'>
           <span className='text-purple'>#</span>random-facts
         </h3>
@@ -16,7 +16,7 @@ export default function About() {
             <li key={id}>{fact}</li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </main>
   );
 }

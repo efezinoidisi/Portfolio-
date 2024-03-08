@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import ScrollAnimate from './ScrollAnimate';
-import { useRef } from 'react';
 import {
   SiJavascript,
   SiCss3,
@@ -78,14 +77,6 @@ type Skill = {
 };
 
 const Skills = () => {
-  const itemRef = useRef<HTMLLIElement | null>(null);
-
-  const { scrollYProgress } = useScroll({
-    target: itemRef,
-    offset: ['start end', 'end start'],
-  });
-
-  const rotate = useTransform(scrollYProgress, [0.5, 1], ['0deg', '-20deg']);
   const skills: Skill[] = [
     {
       id: 0,
@@ -110,9 +101,6 @@ const Skills = () => {
         <motion.li
           className='border border-gray/90 last:col-start-2 first:row-start-2 [&:nth-child(2)]:row-start-3 last:row-start-2 first:row-span-2 max-w-[14rem]'
           key={id}
-          ref={itemRef}
-          style={{ rotate }}
-          transition={{ type: 'spring' }}
         >
           <h3 className='border-b border-gray/80 py-2 px-3 capitalize text-base'>
             {title}

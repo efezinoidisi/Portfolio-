@@ -5,14 +5,20 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { FaWhatsapp } from 'react-icons/fa';
 import Heading from '../Heading';
 
-export default function Contact({ page = '' }: { page?: string }) {
+export default function Contact({
+  page = '',
+  showLine = true,
+}: {
+  page?: string;
+  showLine?: boolean;
+}) {
   // styles for the contact information links
   const link =
     'flex gap-2 items-center py-2 hover:text-purple/90 hover:scale-105 hover:underline ease-linear transition-colors duration-200';
   return (
     <ScrollAnimate id='contact' className='flex flex-col'>
-      {page && <Heading value='contact-me' />}
-      <p className='leading-8  self-center md:self-start md:max-w-full lg:max-w-[60%]'>
+      <Heading value='contact-me' showLine={showLine} />
+      <p className='leading-8  self-center md:self-start md:max-w-full lg:max-w-[80%] mx-auto'>
         If you require a developer&#39;s expertise or are interested in
         establishing a connection for potential collaboration, please don&#39;t
         hesitate to reach out. Whether it&#39;s about joint projects, shared

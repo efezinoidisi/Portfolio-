@@ -3,21 +3,27 @@ import Link from 'next/link';
 import ScrollAnimate from './ScrollAnimate';
 import Heading from './Heading';
 
-export default function About({ hideLink = false }: { hideLink?: boolean }) {
+export default function About({
+  hideLink = false,
+  showLine = true,
+}: {
+  hideLink?: boolean;
+  showLine?: boolean;
+}) {
   return (
     <ScrollAnimate id='about' className={`my-10 flex flex-col justify-evenly`}>
-      <Heading value='about-me' />
+      <Heading value='about-me' showLine={showLine} />
       <div className='flex items-center justify-start small-dots-left flex-col-reverse md:flex-row '>
         <div className='basis-3/5 flex flex-col gap-5  md:max-w-xl'>
           <p
-            className={`leading-7 md:leading-8 mt-5 md:m-0 tracking-wide  text-base  mb-9`}
+            className={`leading-7 md:leading-8 mt-5 md:m-0 tracking-wide  text-base  mb-9 md:text-lg`}
           >
             {' '}
-            Hello I&#39;m Endurance Efezino Idisi, a frontend web developer who
-            loves computers and coding. <br /> <br />
+            Hello I&#39;m Efezino Idisi, a frontend web developer who loves
+            computers and coding. <br /> <br />
             After graduating from college where I studied Computer Science, I
             have participated in bootcamps/internships to gain hands on
-            experience building projects and working in teams.
+            experience building projects and also team work.
             <br />
             <br />I am actively seeking opportunities to contribute my skills
             and expertise to exciting projects. Let&#39;s create something

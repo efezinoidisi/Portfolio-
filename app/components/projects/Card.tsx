@@ -5,13 +5,19 @@ import { FaGithub } from 'react-icons/fa6';
 import { FiExternalLink } from 'react-icons/fi';
 import Link from 'next/link';
 import { useRef } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import {
+  useScroll,
+  useTransform,
+  motion,
+  cubicBezier,
+  easeInOut,
+} from 'framer-motion';
 
 export default function Card(props: Works) {
   const { src, name, brief, stack, github, preview } = props;
 
   const linkStyle =
-    'border border-gray w-full sl:max-w-[50%] px-4 py-1 rounded flex justify-center items-center gap-2 hover:border-none hover:bg-purple/50 transition-colors duration-200 ease-in-out overflow-hidden hover:scale-105 hover:text-white capitalize';
+    'border border-gray w-full sl:max-w-[50%] px-4 py-3 rounded flex justify-center items-center gap-2 hover:border-none hover:bg-purple/50 transition-colors duration-200 ease-in-out overflow-hidden hover:scale-105 hover:text-white capitalize';
   const cardRef = useRef<HTMLLIElement | null>(null);
 
   const { scrollYProgress } = useScroll({
@@ -19,16 +25,17 @@ export default function Card(props: Works) {
     offset: ['start end', 'end start'],
   });
 
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.85]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 0.8], {
+    ease: easeInOut,
+  });
 
   return (
     <motion.li
-      className={`border-2 rounded-lg border-gray/40 overflow-hidden hover:border-purple/90 transition-colors ease-linear duration-200 group pb-4 max-w-[20rem] relative block font-inter`}
+      className={`border-2 rounded-lg border-gray/40 overflow-hidden hover:border-purple/90 transition-colors ease-linear duration-200 group pb-4 md:p-0 w-full relative block font-inter md:grid md:grid-cols-2`}
       ref={cardRef}
       style={{ scale }}
-      transition={{ ease: 'easeInOut' }}
     >
-      <div className='h-40 w-full border-b overflow-hidden'>
+      <div className='h-full w-full border-b overflow-hidden'>
         <Image
           src={`/${src}`}
           alt=''
@@ -39,23 +46,26 @@ export default function Card(props: Works) {
           unoptimized
         />
       </div>
-      <p className='border-b border-gray py-5 capitalize text-base text-center px-2 text-white font-inter tracking-wide '>
-        {stack}
-      </p>
-      <div className='px-3 pt-4 flex flex-col gap-y-3'>
-        <h3 className='text-xl capitalize font-medium text-white text-pretty leading-9 tracking-wide font-fira-code'>
-          {name}
-        </h3>
-        <p className='leading-9 tracking-wides text-lg'>{brief}</p>
-        <div className='flex items-center gap-2 pt-3'>
-          <Link href={github} className={linkStyle}>
-            github <FaGithub />
-          </Link>
-          {preview ? (
-            <Link href={preview} className={linkStyle}>
-              view <FiExternalLink />
+
+      <div className='w-full md:text-center md:pb-8'>
+        <p className='border-b border-gray py-5 capitalize text-base text-center px-2 text-white font-inter tracking-wide'>
+          {stack}
+        </p>
+        <div className='px-3 pt-4 flex flex-col gap-y-3'>
+          <h3 className='text-xl capitalize font-medium text-white text-pretty leading-9 tracking-wide font-fira-code'>
+            {name}
+          </h3>
+          <p className='leading-9 tracking-wides text-lg'>{brief}</p>
+          <div className='flex items-center gap-4 pt-3'>
+            <Link href={github} className={linkStyle}>
+              github <FaGithub />
             </Link>
-          ) : null}
+            {preview ? (
+              <Link href={preview} className={linkStyle}>
+                view <FiExternalLink />
+              </Link>
+            ) : null}
+          </div>
         </div>
       </div>
     </motion.li>

@@ -11,8 +11,8 @@ export default function ProjectsPage() {
     <main className='md:ml-16 p-5'>
       <h1 className='uppercase text-xl font-mono pb-2 text-white'>projects</h1>
       <p className='mb-5 text-base leading-10'>
-        Here are some of the projects I built while learning a new framework or
-        library and also during my bootcamps/internships
+        Here are some of the projects I built during the course of my learning
+        and development.
       </p>
       <div className='flex flex-col gap-y-10'>
         {allProjects.map((project) => (

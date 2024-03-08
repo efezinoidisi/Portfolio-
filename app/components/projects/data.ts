@@ -9,28 +9,38 @@ export const projects: Works[] = [
     preview: 'https://furniture-app-henna.vercel.app/',
     src: 'furniture.png',
     brief:
-      'I built this E-commerce web application to explore Supabase. (still in development)',
+      'An e-commerce web app where mirrors the core features of an online furniture shop. I built this E-commerce web application to explore Supabase.',
   },
 
   {
     id: 2,
     name: 'moviesfun',
-    stack: 'nextjs tailwind typescript next-auth tmdb-api',
+    stack:
+      'nextjs tailwind typescript next-auth tmdb-api mongo-db tanstack-query',
     github: 'https://github.com/efezinoidisi/movies-fun-app',
     preview: 'https://zee-movies.vercel.app',
     src: 'hero-desktop.png',
     brief:
-      'I built this movie web application that provides the latest information about movies, tv shows and celebrities to master Nextjs and  learn NextAuth.',
+      'A movie web application that provides the latest information about movies, tv shows and celebrities. I built to understand more about Nextjs and learn NextAuth.',
   },
   {
     id: 0,
-    name: 'web developer portfolio',
+    name: 'my portfolio',
     stack: 'nextjs tailwind typescript framer-motion ',
     github: 'https://github.com/efezinoidisi/Portfolio-',
     preview: 'https://efezino-portfolio.vercel.app/',
     src: 'portfolio.png',
+    brief: 'A web application that showcases my skills and qualifications.',
+  },
+  {
+    id: 4,
+    name: 'AirBnB clone',
+    stack: 'HTML CSS Python Flask MySQL',
+    github: 'https://github.com/efezinoidisi/AirBnB_clone_v4',
+    preview: '',
+    src: 'airbnb_clone.jpg',
     brief:
-      'A web application that showcases my portfolio and relevant information about me.',
+      'A clone of the AirBnB that focuses on gradually implementing the core features and functionality of the original.',
   },
 ];
 export const teamProjects: Works[] = [
