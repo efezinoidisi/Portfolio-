@@ -9,7 +9,7 @@ export const projects: Works[] = [
     preview: 'https://furniture-app-henna.vercel.app/',
     src: 'furniture.png',
     brief:
-      'An e-commerce web app where mirrors the core features of an online furniture shop. I built this E-commerce web application to explore Supabase.',
+      'An e-commerce web app that mirrors the core features of an online furniture shop. I built this E-commerce web application to explore Supabase.',
   },
 
   {
