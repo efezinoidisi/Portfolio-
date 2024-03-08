@@ -59,7 +59,7 @@ export default function NavBar() {
 
       <>
         <a
-          href='https://drive.google.com/file/d/1XLiYfnlssiSUiJH2L3G7VLiOuaZ5q848/view?usp=sharing'
+          href='https://drive.google.com/file/d/1XSRj2EO19e1srGgZYTSCyo3j5GWkr6RV/view'
           className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-sm md:text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 text-purple'
           aria-label='view my resume'
           target='_blank'
