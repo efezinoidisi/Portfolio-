@@ -19,7 +19,7 @@ export default function Hero() {
       id='hero'
       className='bg-dots bg-no-repeat bg-right-bottom bg-smallest flex flex-col justify-evenly mb-10 md:m-0'
     >
-      <div className='flex flex-col-reverse md:flex-row justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0 min-h-screen'>
+      <div className='flex flex-col-reverse md:flex-row justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0 lg:min-h-screen'>
         <div className='md:basis-3/5 flex flex-col gap-y-2'>
           <h1 className='  tracking-wide leading-10 md:text-left max-w-xl text-lg'>
             <motion.span
