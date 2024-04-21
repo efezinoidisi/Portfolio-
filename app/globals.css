@@ -2,38 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-
-body {
-  scroll-behavior: smooth;
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 5rem;
 }
 
-
 .small-dots-right {
-  @apply bg-dots bg-smallest bg-no-repeat bg-right-bottom
+  @apply bg-dots bg-smallest bg-no-repeat bg-right-bottom;
 }
 
 .small-dots-left {
-  @apply bg-dots bg-smallest bg-no-repeat bg-left-bottom
+  @apply bg-dots bg-smallest bg-no-repeat bg-left-bottom;
 }
 
 .link:hover {
-  @apply scale-[0.9] text-yellow font-medium
+  @apply scale-[0.9] text-yellow font-medium;
 }
 
 .btn:hover {
-  @apply animate-move scale-105 text-yellow font-medium transform duration-75
+  @apply animate-move scale-105 text-yellow font-medium transform duration-75;
 }
 
 .link:active {
-  @apply bg-yellow
+  @apply bg-yellow;
 }
 
 .scroll-watcher {
-  height: .4rem;
+  height: 0.2rem;
   position: fixed;
   top: 0;
   z-index: 1000;
-  background-color: rgb(199 120 221);
+  background-color: rgba(199, 120, 221, 0.7);
   width: 100%;
   scale: 0 1;
   transform-origin: left;
@@ -41,10 +41,9 @@ body {
   animation-timeline: scroll(y);
 }
 
-
 @media screen and (min-width: 765px) {
   .heading::after {
-    @apply w-96
+    @apply w-96;
   }
 }
 

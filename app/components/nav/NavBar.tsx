@@ -1,12 +1,12 @@
-'use client';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import NavLinks from './NavLinks';
-import Button from '../Button';
-import Socials from './Social';
-import Link from 'next/link';
-import { CgMenuRight, CgClose } from 'react-icons/cg';
-import Image from 'next/image';
+"use client";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { CgClose, CgMenuRight } from "react-icons/cg";
+import Button from "../Button";
+import NavLinks from "./NavLinks";
+import Socials from "./Social";
 
 export default function NavBar() {
   const variants = {
@@ -24,7 +24,7 @@ export default function NavBar() {
     },
   };
 
-  const iconStyle = 'text-3xl';
+  const iconStyle = "text-3xl";
 
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
@@ -33,94 +33,99 @@ export default function NavBar() {
   };
 
   return (
-    <header className='flex items-center sticky top-0 bg-body md:ml-16 justify-between p-5 z-50 md:pr-14 bg-opacity-95 '>
+    <motion.header
+      initial={{ y: "-50%", opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ ease: [0.76, 0, 0.24, 1], duration: 1.5, delay: 0.1 }}
+      className="flex items-center sticky top-0 bg-body md:ml-16 justify-between p-5 z-50 md:pr-14 bg-opacity-95"
+    >
       <Button
         handleClick={handleMenu}
-        styles='md:hidden'
-        aria-label='open navigation menu'
-        aria-controls='menu-container'
-        aria-expanded='false'
-        aria-haspopup='true'
-        id='open-menu'
+        styles="md:hidden"
+        aria-label="open navigation menu"
+        aria-controls="menu-container"
+        aria-expanded="false"
+        aria-haspopup="true"
+        id="open-menu"
       >
         <CgMenuRight className={`${iconStyle} rotate-180`} />
       </Button>
       <Link
-        href={'/'}
-        className='text-3xl font-bold flex items-center relative after:content-[""] after:absolute after:top-0  after:size-12 after:bg-shine after:blur-2xl after:rounded-full after:left-0 after:-z-10 hover:scale-95 transition-transform duration-200 ease-out'
+        href={"/"}
+        className='text-3xl font-bold flex items-center relative after:content-[""] after:absolute after:top-0  after:size-12 after:bg-shine after:blur-2xl after:rounded-full after:left-0 after:-z-10 hover:scale-95 transition-transform duration-200 ease-out md:text-5xl'
       >
         <Logo />
-        <span className='text-purple'>ee</span>
+        <span className="text-purple">ee</span>
       </Link>
 
-      <div className='hidden md:block'>
+      <div className="hidden md:block">
         <NavLinks />
       </div>
 
-      <>
-        <a
-          href='https://drive.google.com/file/d/1XSRj2EO19e1srGgZYTSCyo3j5GWkr6RV/view'
-          className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-sm md:text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 text-purple'
-          aria-label='view my resume'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          resumé
-        </a>
-      </>
+      <Link
+        href="https://drive.google.com/file/d/1XSRj2EO19e1srGgZYTSCyo3j5GWkr6RV/view"
+        className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 text-purple md:text-xl'
+        aria-label="view my resume"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        resumé
+      </Link>
 
       {/* mobile navigation  */}
       {showMobileMenu && (
         <>
           {/* overlay */}
           <div
-            className='inset-0 fixed z-40 bg-black/50'
+            className="inset-0 fixed z-40 bg-black/50 h-screen"
             onClick={handleMenu}
           ></div>
           <motion.div
             initial={{ width: 0 }}
-            animate={{ width: '70%' }}
-            className='fixed top-0 bottom-0 bg-gray-500 z-50 bg-body border-r rounded-r-3xl border-purple left-0  p-5  transform transition-transform'
-            id='menu-container'
+            animate={{ width: "70%" }}
+            transition={{ duration: 1 }}
+            exit={{ width: "0" }}
+            className="fixed inset-y-0 bg-gray-500 z-50 bg-body border-r rounded-r-3xl border-purple left-0  p-5 h-screen"
+            id="menu-container"
           >
             <motion.div
-              initial='initial'
-              animate='final'
+              initial="initial"
+              animate="final"
               variants={variants}
-              className='flex flex-col items-center pb-16 justify-between h-full w-full'
+              className="flex flex-col items-center pb-16 justify-between h-full w-full"
             >
-              <div className='flex items-center justify-between w-full'>
+              <div className="flex items-center justify-between w-full">
                 <Logo />
 
                 <Button
                   handleClick={handleMenu}
-                  styles='md:hidden'
-                  aria-label='close navigation menu'
-                  aria-expanded='false'
-                  role='menuitem'
+                  styles="md:hidden"
+                  aria-label="close navigation menu"
+                  aria-expanded="false"
+                  role="menuitem"
                 >
                   <CgClose className={iconStyle} />
                 </Button>
               </div>
               <NavLinks handleClick={handleMenu} />
-              <Socials size={'text-2xl'} />
+              <Socials size={"text-2xl"} />
             </motion.div>
           </motion.div>
         </>
       )}
-    </header>
+    </motion.header>
   );
 }
 
 const Logo = () => {
   return (
     <Image
-      src={'z-logo.jpeg'}
-      alt=''
+      src={"z-logo.jpeg"}
+      alt=""
       width={500}
       height={500}
       unoptimized
-      className='size-8'
+      className="size-8 md:size-10"
     />
   );
 };

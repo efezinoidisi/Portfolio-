@@ -2,25 +2,25 @@ type HeadingProps = {
   value: string;
   size?: string;
   showLine?: boolean;
+  position?: "left" | "right";
 };
 
 export default function Heading({
   value,
-  size = 'text-2xl md:text-4xl',
+  size = "text-4xl sm:text-4xl md:text-6xl",
   showLine = true,
+  position = "left",
 }: HeadingProps) {
   return (
     <h2
-      className={`heading mb-9 capitalize font-bold  after:content-[""]  w-full relative font-ubuntu-mono text-white text-center ${size} ${
-        showLine
-          ? 'after:absolute after:top-1/2 after:border-purple h-fit after:border-b-2 after:w-full after:-translate-y-1/2 after:left-0 after:-z-10 z-20'
-          : ''
-      }`}
+      className={`heading mb-9 capitalize font-bold py-1  w-full relative font-ubuntu-mono text-white  ${size} ${
+        showLine ? "border-b-2 border-purple/20" : ""
+      }  ${position === "left" ? "text-left" : "text-right"}`}
     >
-      <span className='text-purple bg-body pl-3' aria-hidden='true'>
+      <span className="text-purple bg-body pl-3" aria-hidden="true">
         #
       </span>
-      <span className='bg-body pr-3'>{value}</span>
+      <span className="bg-body pr-3">{value}</span>
     </h2>
   );
 }

@@ -1,14 +1,14 @@
-'use client';
-import { useForm } from 'react-hook-form';
-import Input from '../form/Input';
-import { FormData } from '@/types/contact';
-import TextArea from '../form/TextArea';
-import Button from '../Button';
-import toast from 'react-hot-toast';
-import { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { AiOutlineSend } from 'react-icons/ai';
-import Loader from '../loader/Loader';
+"use client";
+import { FormData } from "@/types/contact";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
+import { AiOutlineSend } from "react-icons/ai";
+import Button from "../Button";
+import Input from "../form/Input";
+import TextArea from "../form/TextArea";
+import Loader from "../loader/Loader";
 
 const serviceId = process.env.NEXT_PUBLIC_SERVICE_ID as string;
 const templateId = process.env.NEXT_PUBLIC_TEMPLATE_ID as string;
@@ -22,9 +22,9 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm<FormData>({
     defaultValues: {
-      from_name: '',
-      from_email: '',
-      message: '',
+      from_name: "",
+      from_email: "",
+      message: "",
     },
   });
 
@@ -44,14 +44,14 @@ export default function ContactForm() {
       );
       if (res.status === 200) {
         reset();
-        toast.success('Message sent!', {
-          position: 'top-center',
+        toast.success("Message sent!", {
+          position: "top-center",
         });
       } else {
-        toast.error('Failed to send', { position: 'top-center' });
+        toast.error("Failed to send", { position: "top-center" });
       }
     } catch (error) {
-      toast.error('Failed to send', { position: 'top-center' });
+      toast.error("Failed to send", { position: "top-center" });
     } finally {
       setIsSending(false);
     }
@@ -61,74 +61,74 @@ export default function ContactForm() {
     <form
       onSubmit={onSubmit}
       ref={formRef}
-      className={`w-full flex flex-col gap-2 md:w-1/2 ${
-        isSending ? 'opacity-50 ' : ''
+      className={`w-full flex flex-col gap-5 md:w-1/2 ${
+        isSending ? "opacity-50 " : ""
       } relative`}
     >
       <Input
-        id='from_name'
+        id="from_name"
         register={register}
-        label='full Name'
+        label="full Name"
         options={{
           required: {
             value: true,
-            message: 'please provide your full name',
+            message: "please provide your full name",
           },
           minLength: {
             value: 3,
-            message: 'must be at least 3 characters',
+            message: "must be at least 3 characters",
           },
         }}
         error={errors?.from_name?.message}
-        placeholder='John Smith'
+        placeholder="John Smith"
       />
 
       <Input
-        id='from_email'
+        id="from_email"
         register={register}
-        label='email'
+        label="email"
         options={{
           required: {
             value: true,
-            message: 'email is required',
+            message: "email is required",
           },
           pattern: {
             value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-            message: 'please provide a valid email',
+            message: "please provide a valid email",
           },
         }}
-        type='email'
+        type="email"
         error={errors?.from_email?.message}
-        placeholder='user@example.com'
+        placeholder="user@example.com"
       />
       <TextArea
-        id='message'
+        id="message"
         register={register}
-        label='message'
+        label="message"
         options={{
           required: {
             value: true,
-            message: 'message cannot be empty',
+            message: "message cannot be empty",
           },
           minLength: {
             value: 10,
-            message: 'message must be greater than 10 characters',
+            message: "message must be greater than 10 characters",
           },
         }}
         error={errors?.message?.message}
-        placeholder={'hello Efezino, I would...'}
+        placeholder={"hello Efezino, I would..."}
       />
       <Button
-        styles='flex gap-2 capitalize text-lg border py-2 px-4 w-fit mt-2 items-center btn border-purple rounded-lg disabled:border-gray'
-        type='submit'
+        styles="flex gap-2 capitalize text-lg border py-2 px-4 w-fit mt-2 items-center btn border-purple rounded-lg disabled:border-gray"
+        type="submit"
       >
         send
         <AiOutlineSend />
       </Button>
 
       {isSending && (
-        <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
-          <Loader className={'text-9xl animate-spin text-purple'} />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Loader className={"text-9xl animate-spin text-purple"} />
         </div>
       )}
     </form>
