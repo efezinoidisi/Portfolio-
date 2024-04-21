@@ -16,7 +16,7 @@ export default function About({
         <div className="basis-3/5 flex flex-col gap-5  md:max-w-xl">
           <div className={`mt-5 md:m-0 my-9 `}>
             <Paragraph
-              className="tracking-wide  text-lg md:text-xl leading-loose"
+              className="tracking-wide  text-lg md:text-xl"
               value="Hello I'm Efezino Idisi, a frontend web developer who loves
             computers and coding. After graduating from college where I studied Computer Science, I
             have participated in bootcamps/internships to gain hands on

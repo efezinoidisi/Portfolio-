@@ -27,7 +27,7 @@ export const projects: Works[] = [
     name: "my portfolio",
     stack: ["nextjs", "tailwind", "typescript", "framer-motion "],
     github: "https://github.com/efezinoidisi/Portfolio-",
-    preview: "https://efezino-portfolio.vercel.app/",
+    preview: "https://efezino-portfolio.netlify.app/",
     src: "/portfolio.webp",
     brief: "A web application that showcases my skills and qualifications.",
   },

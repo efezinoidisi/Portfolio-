@@ -17,7 +17,10 @@ export default function Contact({
   return (
     <div id="contact" className="flex flex-col">
       <Heading value="contact-me" showLine={showLine} position="right" />
-      <p className="  self-center md:self-start md:max-w-[50rem] leading-relaxed text-lg md:text-xl">
+      <p
+        className="  self-center md:self-start md:max-w-[50rem] text-lg md:text-xl"
+        style={{ lineHeight: 2 }}
+      >
         If you require a developer&#39;s expertise or are interested in
         establishing a connection for potential collaboration, please don&#39;t
         hesitate to reach out. Whether it&#39;s about joint projects, shared

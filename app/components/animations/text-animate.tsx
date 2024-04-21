@@ -27,6 +27,7 @@ export function Paragraph({
     <motion.p
       ref={ref}
       className={`flex flex-wrap gap-1 ${className}`}
+      style={{ lineHeight: 2 }}
       transition={{ staggerChildren: 0.5 }}
     >
       {words.map((word, index) => {

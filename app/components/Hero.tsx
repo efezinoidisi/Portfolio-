@@ -14,7 +14,7 @@ export default function Hero() {
       id="hero"
       className="bg-dots bg-no-repeat bg-right-bottom bg-smallest flex flex-col justify-evenly mb-10 md:m-0 "
     >
-      <div className="grid md:grid-cols-3 justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0 lg:min-h-screen gap-4">
+      <div className="grid md:grid-cols-3 justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0 lg:min-h-screen gap-4 md:gap-9">
         <div className=" bg-dots bg-smallest bg-no-repeat bg-right-bottom flex justify-center">
           <motion.div
             className='after:content-[""] relative after:-left-2 after:bg-gradient-to-tr after:from-purple after:to-gray after:absolute after:-right-2
