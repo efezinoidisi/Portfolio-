@@ -1,26 +1,29 @@
+import avatar from "@/assets/avatar.jpg";
 import Image from "next/image";
 import Heading from "./Heading";
 import { Paragraph } from "./animations/text-animate";
 
-export default function About({
-  hideLink = false,
-  showLine = true,
-}: {
-  hideLink?: boolean;
-  showLine?: boolean;
-}) {
+export default function About() {
   return (
     <div id="about" className={`my-10 flex flex-col justify-evenly`}>
-      <Heading value="about-me" showLine={showLine} />
+      <Heading value="about-me" />
       <div className="flex items-center justify-start small-dots-left flex-col-reverse md:flex-row ">
         <div className="basis-3/5 flex flex-col gap-5  md:max-w-xl">
-          <div className={`mt-5 md:m-0 my-9 `}>
+          <div className={`mt-5 md:m-0 my-9  space-y-14`}>
             <Paragraph
-              className="tracking-wide  text-lg md:text-xl"
+              className="tracking-wide  text-lg md:text-xl leading-loose"
               value="Hello I'm Efezino Idisi, a frontend web developer who loves
-            computers and coding. After graduating from college where I studied Computer Science, I
-            have participated in bootcamps/internships to gain hands on
-            experience building projects and also team building. I am actively seeking opportunities to contribute my skills
+            computers and coding. "
+            />
+
+            <p className="tracking-wide  text-lg md:text-xl leading-loose">
+              After graduating from college where I studied Computer Science, I
+              have participated in bootcamps/internships to gain hands on
+              experience building projects and also team building.
+            </p>
+            <Paragraph
+              className="tracking-wide  text-lg md:text-xl leading-loose"
+              value="I am actively seeking opportunities to contribute my skills
             and expertise to exciting projects. Let's create something
             amazing together!"
             />
@@ -29,12 +32,12 @@ export default function About({
 
         <div className="basis-2/5 flex md:justify-end justify-center items-center py-4 self-start">
           <Image
-            src={"/avatar.jpg"}
+            src={avatar}
             alt=""
-            width={0}
-            height={0}
-            sizes="60vw"
-            className="w-2/3 md:w-2/3 rounded-full border-2 border-purple animate-move"
+            width={400}
+            height={500}
+            className="w-2/3 md:w-2/3 rounded-full border-2 border-b-8 border-purple animate-move"
+            placeholder="blur"
             unoptimized
           />
         </div>

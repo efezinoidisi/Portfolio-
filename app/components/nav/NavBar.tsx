@@ -120,7 +120,7 @@ export default function NavBar() {
 const Logo = () => {
   return (
     <Image
-      src={"z-logo.jpeg"}
+      src={"/z-logo.jpeg"}
       alt=""
       width={500}
       height={500}

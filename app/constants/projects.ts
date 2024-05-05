@@ -1,4 +1,5 @@
 import { Works } from "@/types/project";
+import images from "./images";
 
 export const projects: Works[] = [
   {
@@ -7,7 +8,7 @@ export const projects: Works[] = [
     stack: ["nextjs", "tailwind", "typescript", "supabase"],
     github: "https://github.com/efezinoidisi/furniture-app",
     preview: "https://z-furniture.netlify.app/",
-    src: "/furniture.png",
+    src: images.furniture,
     brief:
       "An e-commerce web app that mirrors the core features of an online furniture shop. I built this E-commerce web application to explore Supabase.",
   },
@@ -18,7 +19,7 @@ export const projects: Works[] = [
     stack: ["nextjs", "tailwind", "typescript", "tmdb-api", "tanstack-query"],
     github: "https://github.com/efezinoidisi/movies-fun-app",
     preview: "https://zee-movies-fun.netlify.app",
-    src: "/movies-app.webp",
+    src: images.movies,
     brief:
       "A movie web application that provides the latest information about movies, tv shows and celebrities. I built to understand more about Nextjs and learn NextAuth.",
   },
@@ -28,7 +29,7 @@ export const projects: Works[] = [
     stack: ["nextjs", "tailwind", "typescript", "framer-motion "],
     github: "https://github.com/efezinoidisi/Portfolio-",
     preview: "https://efezino-portfolio.netlify.app/",
-    src: "/portfolio.webp",
+    src: images.portfolio,
     brief: "A web application that showcases my skills and qualifications.",
   },
   {
@@ -37,7 +38,7 @@ export const projects: Works[] = [
     stack: ["Python", "Flask", "MySQL"],
     github: "https://github.com/efezinoidisi/AirBnB_clone_v4",
     preview: "",
-    src: "/airbnb_clone.jpg",
+    src: images.airbnb,
     brief:
       "A clone of the AirBnB that focuses on gradually implementing the core features and functionality of the original.",
   },
@@ -49,7 +50,7 @@ export const teamProjects: Works[] = [
     stack: ["react"],
     github: "https://github.com/workshopapps/applyforme.web",
     preview: "",
-    src: "/applyforme.png",
+    src: images.apply,
     brief:
       "An application designed to assist job seekers in streamlining their job application process.",
   },
@@ -59,7 +60,7 @@ export const teamProjects: Works[] = [
     stack: ["react", "flask", "tanstack-query", "tailwind", "recharts"],
     github: "https://github.com/codelawani/ProAlx",
     preview: "https://proalx.live",
-    src: "/proalx.png",
+    src: images.proalx,
     brief:
       "A web application that helps ALX students find active partners for team projects.",
   },
@@ -69,7 +70,7 @@ export const teamProjects: Works[] = [
     stack: ["nextjs", "tailwind", "typescript"],
     github: "https://github.com/codelawani/duty_circle",
     preview: "https://dutycircle.vercel.app/",
-    src: "/dutycircle.png",
+    src: images.dutycircle,
     brief:
       "An application where users can create and manage personal tasks while also choosing to share them publicly.",
   },
@@ -82,7 +83,7 @@ export const sideProjects: Works[] = [
     stack: ["react", "typescript", "styled-components"],
     github: "https://github.com/efezinoidisi/todo-app",
     preview: "https://fun-todo.netlify.app/",
-    src: "/todo.png",
+    src: images.todo,
     brief:
       "I built this simple CRUD application that helps users keep track of their todo list to learn typescript and styled components.",
   },
@@ -92,7 +93,7 @@ export const sideProjects: Works[] = [
     stack: ["react", "styled-components"],
     github: "https://github.com/efezinoidisi/Metabnb",
     preview: "https://zee-metabnb.netlify.app/",
-    src: "/metabnb.png",
+    src: images.metabnb,
     brief: "A web application where users can build a multiverse home",
   },
   {
@@ -101,7 +102,11 @@ export const sideProjects: Works[] = [
     stack: ["react"],
     github: "https://github.com/efezinoidisi/link-task1",
     preview: "https://linktree-task.netlify.app/",
-    src: "/linktree-task.png",
+    src: images.linktree,
     brief: "I built this SPA react web application to learn react",
   },
 ];
+
+const allProjects = [...projects, ...teamProjects, ...sideProjects];
+
+export default allProjects;

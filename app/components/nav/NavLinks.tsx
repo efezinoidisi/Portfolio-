@@ -18,12 +18,12 @@ export default function NavLinks({
           <Link
             href={`${href}`}
             key={name}
-            className={`relative hover:border-b 
-        hover:border-purple/70 group active:text-yellow w-fit  transition-all py-1 flex gap-2 text-lg md:text-xl`}
+            className={`relative hover:border-b-2 
+        hover:border-purple/70 group active:text-yellow w-fit  transition-all py-1 flex gap-2 md:text-lg ease-linear `}
             onClick={handleClick}
           >
             <span className="md:hidden text-yellow">0{index + 1}</span>
-            <span className="group-hover:text-white capitalize group-hover:scale-105">
+            <span className="group-hover:text-purple/50 capitalize group-hover:scale-105">
               {name}
             </span>
           </Link>
@@ -34,7 +34,6 @@ export default function NavLinks({
 }
 
 const links: NavLink[] = [
-  { name: "home", href: "/" },
   { name: "projects", href: "#projects" },
   { name: "about-me", href: "#about" },
   { name: "contact-me", href: "#contact" },

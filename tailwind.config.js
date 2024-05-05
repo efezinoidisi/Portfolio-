@@ -44,6 +44,7 @@ module.exports = {
       animation: {
         nav: "slide 0.5s ease-in-out forwards 1",
         move: "button 1s ease-in-out infinite",
+        fadeIn: "fadeIn 0.4s linear",
       },
       keyframes: {
         slide: {
@@ -56,6 +57,14 @@ module.exports = {
           "50%": { borderRightColor: "#E5C07A" },
           "75%": { borderTopColor: "#E5C07A" },
           "100%": { borderBottomColor: "#E5C07A" },
+        },
+
+        fadeIn: {
+          from: {
+            transform: "translateY(30%)",
+            opacity: 0,
+            scale: 0.8,
+          },
         },
       },
     },

@@ -1,9 +1,5 @@
 import Projects from "@/components/projects/Projects";
-import {
-  projects,
-  sideProjects,
-  teamProjects,
-} from "@/components/projects/data";
+import { projects, sideProjects, teamProjects } from "@/constants/projects";
 import { Works } from "@/types/project";
 
 export default function ProjectsPage() {

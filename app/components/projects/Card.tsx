@@ -7,10 +7,10 @@ import { FaGithub } from "react-icons/fa6";
 import { FiExternalLink } from "react-icons/fi";
 
 export default function Card(props: Works) {
-  const { src, name, brief, stack, github, preview } = props;
+  const { src, name, stack, id, github, preview, brief } = props;
 
   const linkStyle =
-    "border border-purple/60 w-full px-4 py-2 rounded flex justify-center items-center gap-2 hover:border-none hover:bg-purple/50 transition-colors duration-200 ease-in-out overflow-hidden hover:scale-105 hover:text-white capitalize max-w-[50%]";
+    "border border-purple/60 w-full py-2 rounded flex justify-center items-center gap-2 hover:border-none hover:bg-purple/50 transition-colors duration-200 ease-in-out overflow-hidden hover:scale-105 hover:text-white capitalize max-w-[43%]";
 
   return (
     <motion.li
@@ -20,13 +20,14 @@ export default function Card(props: Works) {
       whileInView={{ opacity: 1, x: 0, scale: 1 }}
       className={`border-2 flex flex-col rounded-lg border-gray/40 overflow-hidden hover:border-purple/90 transition-colors ease-linear duration-200 group pb-4  w-full relative  font-inter`}
     >
-      <div className=" border-b overflow-hidden border-gray/70 min-h-[15rem] max-h-[15rem]">
+      <div className="w-full border-b overflow-hidden border-gray/70 ">
         <Image
           src={src}
           alt={`screenshot of ${name} project`}
-          width={500}
+          width={800}
           height={500}
           className="h-full w-full  group-hover:scale-110  duration-300 object-cover ease-in-out"
+          placeholder="blur"
           unoptimized
         />
       </div>
@@ -43,7 +44,8 @@ export default function Card(props: Works) {
           </li>
         ))}
       </ul>
-      <div className="flex items-center gap-4 w-3/4 mt-auto mx-3">
+
+      <div className="flex mx-3 items-center mt-auto my-4 gap-4 w-full">
         <Link href={github} className={linkStyle}>
           github <FaGithub />
         </Link>

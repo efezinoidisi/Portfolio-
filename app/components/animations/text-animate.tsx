@@ -102,9 +102,6 @@ export function TextTyping({ text }: { text: string }) {
             transition={{
               duration: 1,
               delay: index * 0.1,
-              repeat: Infinity,
-              repeatDelay: 0.8,
-              repeatType: "loop",
             }}
           >
             {word}

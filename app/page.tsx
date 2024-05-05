@@ -2,7 +2,7 @@ import About from "@/components/About";
 import Hero from "@/components/Hero";
 import Contact from "@/components/contact/Contact";
 import Projects from "@/components/projects/Projects";
-import { projects } from "@/components/projects/data";
+import { projects } from "@/constants/projects";
 
 export default function Home() {
   return (
