@@ -1,7 +1,7 @@
 "use client";
 
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 export function Paragraph({
   value,
@@ -16,11 +16,6 @@ export function Paragraph({
     offset: ["start 0.9", "start 0.25"],
   });
 
-  useEffect(() => {
-    scrollYProgress.on("change", (e) => {
-      console.log(e);
-    });
-  }, []);
   const words = value.split(" ");
 
   return (

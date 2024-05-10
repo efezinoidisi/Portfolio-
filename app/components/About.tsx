@@ -11,18 +11,19 @@ export default function About() {
         <div className="basis-3/5 flex flex-col gap-5  md:max-w-xl">
           <div className={`mt-5 md:m-0 my-9  space-y-14`}>
             <Paragraph
-              className="tracking-wide  text-lg md:text-xl leading-loose"
+              className="tracking-wide  leading-loose"
               value="Hello I'm Efezino Idisi, a frontend web developer who loves
             computers and coding. "
             />
 
-            <p className="tracking-wide  text-lg md:text-xl leading-loose">
+            <p className="tracking-wide  leading-loose">
               After graduating from college where I studied Computer Science, I
               have participated in bootcamps/internships to gain hands on
-              experience building projects and also team building.
+              experience building projects and also working in a
+              cross-functional team.
             </p>
             <Paragraph
-              className="tracking-wide  text-lg md:text-xl leading-loose"
+              className="tracking-wide  leading-loose"
               value="I am actively seeking opportunities to contribute my skills
             and expertise to exciting projects. Let's create something
             amazing together!"

@@ -1,5 +1,10 @@
 import Projects from "@/components/projects/Projects";
-import { projects, sideProjects, teamProjects } from "@/constants/projects";
+import {
+  landingPages,
+  projects,
+  sideProjects,
+  teamProjects,
+} from "@/constants/projects";
 import { Works } from "@/types/project";
 
 export default function ProjectsPage() {
@@ -29,6 +34,11 @@ const allProjects: { heading: string; list: Works[] }[] = [
   {
     heading: "main-projects",
     list: projects,
+  },
+
+  {
+    heading: "landing-pages",
+    list: landingPages,
   },
   {
     heading: "team-projects",

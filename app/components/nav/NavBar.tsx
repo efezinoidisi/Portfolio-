@@ -64,7 +64,7 @@ export default function NavBar() {
 
       <Link
         href="https://drive.google.com/file/d/1XSRj2EO19e1srGgZYTSCyo3j5GWkr6RV/view"
-        className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 text-purple md:text-xl'
+        className='border px-3 py-2 rounded-lg hover:border-yellow hover:text-yellow transition-colors duration-75 hover:scale-95 text-base relative after:content-[""] after:absolute after:top-0  after:size-20 after:bg-shine after:blur-3xl after:rounded-3xl after:left-0 after:-z-10 text-purple'
         aria-label="view my resume"
         target="_blank"
         rel="noopener noreferrer"
@@ -77,7 +77,7 @@ export default function NavBar() {
         <>
           {/* overlay */}
           <div
-            className="inset-0 fixed z-40 bg-black/50 h-screen"
+            className="inset-0 fixed z-40 bg-black/50 h-screen md:hidden"
             onClick={handleMenu}
           ></div>
           <motion.div
@@ -85,7 +85,7 @@ export default function NavBar() {
             animate={{ width: "70%" }}
             transition={{ duration: 1 }}
             exit={{ width: "0" }}
-            className="fixed inset-y-0 bg-gray-500 z-50 bg-body border-r rounded-r-3xl border-purple left-0  p-5 h-screen"
+            className="fixed inset-y-0 bg-gray-500 z-50 bg-body border-r rounded-r-3xl border-purple left-0  p-5 h-screen md:hidden"
             id="menu-container"
           >
             <motion.div

@@ -18,7 +18,7 @@ export default function Contact({
     <div id="contact" className="flex flex-col">
       <Heading value="contact-me" showLine={showLine} position="right" />
       <p
-        className="  self-center md:self-start md:max-w-[50rem] text-lg md:text-xl"
+        className="  self-center md:self-start md:max-w-[50rem]"
         style={{ lineHeight: 2 }}
       >
         If you require a developer&#39;s expertise or are interested in
@@ -29,7 +29,7 @@ export default function Contact({
       </p>
 
       <section className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0 w-full py-5 md:py-10">
-        <div className="border-b border-r w-fit px-4 self-center mt-5 py-5 rounded-md shadow-ml">
+        <div className="border-b border-r w-fit px-4 self-center mt-5 py-5 rounded-md shadow-ml md:self-start">
           <h3 className="text-white py-3 capitalize text-lg font-bold">{`contact information`}</h3>
 
           <Link

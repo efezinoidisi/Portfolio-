@@ -8,13 +8,12 @@ import Heading from "./Heading";
 import { TextTyping, WordTyping } from "./animations/text-animate";
 
 export default function Hero() {
-  const delay = 1;
   return (
-    <div
+    <section
       id="hero"
-      className="bg-dots bg-no-repeat bg-right-bottom bg-smallest flex flex-col justify-evenly mb-10 md:m-0 "
+      className="bg-dots bg-no-repeat bg-right-bottom bg-smallest flex flex-col justify-evenly mb-10 md:m-0  gap-y-20"
     >
-      <div className="grid md:grid-cols-3 justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0 lg:min-h-screen gap-4 md:gap-9">
+      <div className="grid md:grid-cols-3 justify-center  md:justify-between items-center bg-dots bg-no-repeat bg-left-top bg-small pb-10 md:pb-0 lg:min-h-screen gap-4 md:gap-9 py-10">
         <div className=" bg-dots bg-smallest bg-no-repeat bg-right-bottom flex justify-center">
           <motion.div
             className='after:content-[""] relative after:-left-2 after:bg-gradient-to-tr after:from-purple after:to-gray after:absolute after:-right-2
@@ -30,7 +29,7 @@ export default function Hero() {
             />
           </motion.div>
         </div>
-        <div className="md:col-span-2 flex flex-col gap-y-8 md:col-start-1 md:row-start-1">
+        <div className="md:col-span-2 space-y-12 md:col-start-1 md:row-start-1">
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,14 +42,14 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
-            className=" tracking-wide leading-9 md:text-left max-w-xl text-xl sm:text-2xl md:leading-[1.5]"
+            className=" tracking-wide leading-9 md:text-left max-w-xl text-xl sm:text-xl md:leading-[1.5]"
           >
             <WordTyping text=" who is passionate about coding and loves building responsive and dynamic web applications / websites." />
           </motion.p>
           <motion.div
-            initial={{ opacity: 0, x: "100px" }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.8 }}
+            initial={{ opacity: 0, y: "20%", scale: 0.5, rotate: "-30deg" }}
+            whileInView={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
+            transition={{ duration: 1.2 }}
           >
             <Link
               href={"#contact"}
@@ -63,7 +62,7 @@ export default function Hero() {
       </div>
 
       <Skills />
-    </div>
+    </section>
   );
 }
 

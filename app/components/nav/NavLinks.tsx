@@ -19,7 +19,7 @@ export default function NavLinks({
             href={`${href}`}
             key={name}
             className={`relative hover:border-b-2 
-        hover:border-purple/70 group active:text-yellow w-fit  transition-all py-1 flex gap-2 md:text-lg ease-linear `}
+        hover:border-purple/70 group active:text-yellow w-fit  transition-all py-1 flex gap-2 ease-linear `}
             onClick={handleClick}
           >
             <span className="md:hidden text-yellow">0{index + 1}</span>

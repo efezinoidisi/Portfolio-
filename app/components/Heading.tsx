@@ -10,7 +10,7 @@ type HeadingProps = {
 
 export default function Heading({
   value,
-  size = "text-4xl sm:text-4xl md:text-6xl",
+  size = "text-2xl md:text-4xl",
   showLine = true,
   position = "left",
 }: HeadingProps) {
@@ -19,11 +19,11 @@ export default function Heading({
       initial={
         position === "left"
           ? { x: "-20%", opacity: 0 }
-          : { y: "50%", opacity: 0 }
+          : { x: "50%", opacity: 0 }
       }
-      whileInView={{ x: 0, y: 0, opacity: 1 }}
+      whileInView={{ x: 0, opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className={`heading mb-9 capitalize font-bold py-1  w-full relative font-ubuntu-mono text-white  ${size} ${
+      className={`heading mb-9 capitalize font-bold py-1  w-full relative font-ubuntu-mono text-white ${size} ${
         showLine ? "border-b-2 border-purple/20" : ""
       }  ${position === "left" ? "text-left" : "text-right"}`}
     >

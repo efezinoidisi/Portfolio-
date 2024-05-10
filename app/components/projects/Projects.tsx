@@ -23,7 +23,7 @@ export default function Projects(props: {
         size={
           page !== "home"
             ? "text-2xl md:text-3xl"
-            : "text-4xl sm:text-4xl md:text-6xl"
+            : "text-2xl sm:text-3xl md:text-4xl"
         }
       />
 

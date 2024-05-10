@@ -1,8 +1,6 @@
-import AnimationExitWrapper from "@/components/AnimationExitWrapper";
 import Footer from "@/components/Footer";
 import MiniSidebar from "@/components/nav/MiniSidebar";
 import NavBar from "@/components/nav/NavBar";
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Toaster } from "react-hot-toast";
 import { firaCode, inter, ubuntu } from "./fonts";
@@ -25,16 +23,13 @@ export default function RootLayout({
         className={`${firaCode.variable} ${ubuntu.variable} ${inter.variable} bg-body text-gray font-fira-code`}
       >
         <span className="scroll-watcher"></span>
-        <AnimationExitWrapper>
-          <NavBar />
-          <MiniSidebar />
-          <div className="md:w-11/12 md:mx-auto">
-            <Toaster />
-            {children}
-          </div>
-        </AnimationExitWrapper>
+        <NavBar />
+        <MiniSidebar />
+        <div className="md:w-11/12 md:mx-auto overflow-clip">
+          <Toaster />
+          {children}
+        </div>
         <Footer />
-        <Analytics />
       </body>
     </html>
   );

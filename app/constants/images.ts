@@ -18,6 +18,10 @@ import metabnb from "@/assets/metabnb.png";
 
 import apply from "@/assets/applyforme.png";
 
+import space from "@/assets/space-tourism.webp";
+
+import realEstate from "@/assets/real-estate.webp";
+
 const images = {
   proalx,
   metabnb,
@@ -29,6 +33,8 @@ const images = {
   portfolio,
   airbnb,
   apply,
+  space,
+  realEstate,
 };
 
 export default images;

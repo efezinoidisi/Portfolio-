@@ -24,6 +24,16 @@ export const projects: Works[] = [
       "A movie web application that provides the latest information about movies, tv shows and celebrities. I built to understand more about Nextjs and learn NextAuth.",
   },
   {
+    id: 11,
+    name: "space tourism",
+    stack: ["nextjs", "react", "tailwindcss", "typescript"],
+    preview: "https://space-tourism-zee.netlify.app/",
+    github: "https://github.com/efezinoidisi/space-tourism",
+    src: images.space,
+    brief:
+      "A frontend mentor challenge. This was my first nextjs project to understand the app router",
+  },
+  {
     id: 0,
     name: "my portfolio",
     stack: ["nextjs", "tailwind", "typescript", "framer-motion "],
@@ -76,6 +86,18 @@ export const teamProjects: Works[] = [
   },
 ];
 
+export const landingPages: Works[] = [
+  {
+    id: 12,
+    name: "realtors",
+    stack: ["HTML", "CSS", "JavaScript"],
+    preview: "https://zee-real-estate-landing-page.netlify.app/",
+    github: "https://github.com/efezinoidisi/real-estate-landing-page",
+    src: images.realEstate,
+    brief: "A landing page for a real estate company",
+  },
+];
+
 export const sideProjects: Works[] = [
   {
     id: 8,
@@ -107,6 +129,11 @@ export const sideProjects: Works[] = [
   },
 ];
 
-const allProjects = [...projects, ...teamProjects, ...sideProjects];
+const allProjects = [
+  ...projects,
+  ...teamProjects,
+  ...sideProjects,
+  ...landingPages,
+];
 
 export default allProjects;
