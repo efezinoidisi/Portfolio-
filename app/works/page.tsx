@@ -1,23 +1,18 @@
-import Projects from "@/components/projects/Projects";
-import {
-  landingPages,
-  projects,
-  sideProjects,
-  teamProjects,
-} from "@/constants/projects";
-import { Works } from "@/types/project";
+import Projects from '@/components/projects/Projects';
+import { landingPages, projects, teamProjects } from '@/constants/projects';
+import { Works } from '@/types/project';
 
 export default function ProjectsPage() {
   return (
-    <main className="md:ml-16 p-5">
-      <h1 className="uppercase text-2xl font-mono pb-2 text-white ">
+    <main className='md:ml-16 p-5'>
+      <h1 className='uppercase text-2xl font-mono pb-2 text-white '>
         projects
       </h1>
-      <p className="mb-5 text-lg leading-10">
+      <p className='mb-5 text-lg leading-10'>
         Here are some of the projects built during the course of my learning and
         development.
       </p>
-      <div className="flex flex-col gap-y-10">
+      <div className='flex flex-col gap-y-10'>
         {allProjects.map((project) => (
           <Projects
             key={project.heading}
@@ -32,20 +27,16 @@ export default function ProjectsPage() {
 
 const allProjects: { heading: string; list: Works[] }[] = [
   {
-    heading: "main-projects",
+    heading: 'main-projects',
     list: projects,
   },
 
   {
-    heading: "landing-pages",
+    heading: 'landing-pages',
     list: landingPages,
   },
   {
-    heading: "team-projects",
+    heading: 'team-projects',
     list: teamProjects,
-  },
-  {
-    heading: "side-projects",
-    list: sideProjects,
   },
 ];
