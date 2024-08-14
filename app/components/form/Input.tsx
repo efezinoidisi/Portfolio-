@@ -7,7 +7,7 @@ type InputProps = {
   id: 'from_name' | 'from_email';
   register: UseFormRegister<FormData>;
   error?: string;
-  options?: RegisterOptions;
+  options?: RegisterOptions<FormData>;
   placeholder?: string;
 };
 
@@ -30,7 +30,7 @@ export default function Input(props: InputProps) {
         id={id}
         {...register(id, options)}
         placeholder={placeholder}
-        aria-invalid={error ? true : false}
+        aria-invalid={error ? 'true' : 'false'}
       />
       <label
         htmlFor={id}

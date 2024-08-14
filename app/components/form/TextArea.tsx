@@ -1,12 +1,12 @@
-import { UseFormRegister, RegisterOptions } from 'react-hook-form';
 import { FormData } from '@/types/contact';
+import { RegisterOptions, UseFormRegister } from 'react-hook-form';
 
 type Props = {
   label: string;
   id: 'message';
   register: UseFormRegister<FormData>;
   error?: string;
-  options?: RegisterOptions;
+  options?: RegisterOptions<FormData>;
   placeholder: string;
 };
 
