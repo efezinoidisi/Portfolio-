@@ -46,11 +46,11 @@ export default function Card(props: Works) {
       </ul>
 
       <div className='flex mx-3 items-center mt-auto my-4 gap-4 w-full'>
-        <Link href={github} className={linkStyle}>
+        <Link href={github} className={linkStyle} prefetch>
           github <FaGithub />
         </Link>
         {preview ? (
-          <Link href={preview} className={linkStyle}>
+          <Link href={preview} className={linkStyle} prefetch>
             view <FiExternalLink />
           </Link>
         ) : null}

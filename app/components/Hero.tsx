@@ -83,7 +83,7 @@ const Skills = () => {
       id: 1,
       title: 'frameworks/libraries',
       content:
-        'react next-js tailwind-css styled-components tanstack-query react-hook-form ',
+        'react next-js vue3 tailwind-css styled-components tanstack-query react-hook-form ',
     },
     {
       id: 2,
